@@ -170,7 +170,7 @@ export const products = [
   {
     id: "82bb68d7-ebc9-476a-989c-c78a40ee5cd9",
     image: "images/products/Tigercharge.png",
-    name: "Ai Artwork - Tigercharge",
+    name: "AI Artwork - Tigercharge",
     rating: {
       stars: 4,
       count: 160
@@ -181,7 +181,7 @@ export const products = [
   {
     id: "c2a82c5e-aff4-435f-9975-517cfaba2ece",
     image: "images/products/Abstractmulti.png",
-    name: "Ai Artwork - Abstractmulti",
+    name: "AI Artwork - Abstractmulti",
     rating: {
       stars: 5,
       count: 846
