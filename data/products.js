@@ -44,7 +44,7 @@ export const products = [
   {
     id: "83d4ca15-0f35-48f5-b7a3-1ea210004f2e",
     image: "images/products/RaceHorses.png",
-    name: "AI Artwork - RaceHorses",
+    name: "AI Artwork - Race Horses",
     rating: {
       stars: 4.5,
       count: 56
@@ -61,7 +61,7 @@ export const products = [
   {
     id: "54e0eccd-8f36-462b-b68a-8182611d9add",
     image: "images/products/2Birds.png",
-    name: "AInArtwork - 2Birds.png",
+    name: "AI Artwork - TwoBirds",
     rating: {
       stars: 5,
       count: 2197
@@ -75,13 +75,13 @@ export const products = [
   },
   {
     id: "3ebe75dc-64d2-4137-8860-1f5a963e534b",
-    image: "images/products/6-piece-white-dinner-plate-set.jpg",
-    name: "6 Piece White Dinner Plate Set",
+    image: "images/products/Shark.png",
+    name: "AI Artwork - Shark",
     rating: {
       stars: 4,
       count: 37
     },
-    priceCents: 2067,
+    priceCents: 360,
     keywords: [
       "plates",
       "kitchen",
@@ -90,13 +90,13 @@ export const products = [
   },
   {
     id: "8c9c52b5-5a19-4bcb-a5d1-158a74287c53",
-    image: "images/products/6-piece-non-stick-baking-set.webp",
-    name: "6-Piece Nonstick, Carbon Steel Oven Bakeware Baking Set",
+    image: "images/products/Planetfinger.png",
+    name: "AI Artwork - Planetfinger",
     rating: {
       stars: 4.5,
       count: 175
     },
-    priceCents: 3499,
+    priceCents: 360,
     keywords: [
       "kitchen",
       "cookware"
@@ -104,13 +104,13 @@ export const products = [
   },
   {
     id: "dd82ca78-a18b-4e2a-9250-31e67412f98d",
-    image: "images/products/plain-hooded-fleece-sweatshirt-yellow.jpg",
-    name: "Plain Hooded Fleece Sweatshirt",
+    image: "images/products/Jungletrails.png",
+    name: "AI Artwork - Jungletrails",
     rating: {
       stars: 4.5,
       count: 317
     },
-    priceCents: 2400,
+    priceCents: 360,
     keywords: [
       "hoodies",
       "sweaters",
@@ -119,30 +119,23 @@ export const products = [
   },
   {
     id: "77919bbe-0e56-475b-adde-4f24dfed3a04",
-    image: "images/products/luxury-tower-set-6-piece.jpg",
-    name: "Luxury Towel Set - Graphite Gray",
+    image: "images/products/Tank.png",
+    name: "AI Artwork - Tank",
     rating: {
       stars: 4.5,
       count: 144
     },
-    priceCents: 3599,
-    keywords: [
-      "bathroom",
-      "washroom",
-      "restroom",
-      "towels",
-      "bath towels"
-    ]
+    priceCents: 360,
   },
   {
     id: "3fdfe8d6-9a15-4979-b459-585b0d0545b9",
-    image: "images/products/liquid-laundry-detergent-plain.jpg",
-    name: "Liquid Laundry Detergent, 110 Loads, 82.5 Fl Oz",
+    image: "images/products/Tiger.png",
+    name: "AI Artwork - Tiger",
     rating: {
       stars: 4.5,
       count: 305
     },
-    priceCents: 2899,
+    priceCents: 360,
     keywords: [
       "bathroom",
       "cleaning"
@@ -150,13 +143,13 @@ export const products = [
   },
   {
     id: "58b4fc92-e98c-42aa-8c55-b6b79996769a",
-    image: "images/products/knit-athletic-sneakers-gray.jpg",
-    name: "Waterproof Knit Athletic Sneakers - Gray",
+    image: "images/products/Greenfield.png",
+    name: "AI Artwork - Greenfield",
     rating: {
       stars: 4,
       count: 89
     },
-    priceCents: 3390,
+    priceCents: 360,
     keywords: [
       "shoes",
       "running shoes",
@@ -165,13 +158,13 @@ export const products = [
   },
   {
     id: "5968897c-4d27-4872-89f6-5bcb052746d7",
-    image: "images/products/women-chiffon-beachwear-coverup-black.jpg",
-    name: "Women's Chiffon Beachwear Cover Up - Black",
+    image: "images/products/Designer.png",
+    name: "AI Artwork - Shelf Design",
     rating: {
       stars: 4.5,
       count: 235
     },
-    priceCents: 2070,
+    priceCents: 360,
     keywords: [
       "robe",
       "swimsuit",
@@ -184,13 +177,13 @@ export const products = [
   },
   {
     id: "aad29d11-ea98-41ee-9285-b916638cac4a",
-    image: "images/products/round-sunglasses-black.jpg",
-    name: "Round Sunglasses",
+    image: "images/products/Polarbear.png",
+    name: "AI Artwork - Polarbear",
     rating: {
       stars: 4.5,
       count: 30
     },
-    priceCents: 1560,
+    priceCents: 360,
     keywords: [
       "accessories",
       "shades"
