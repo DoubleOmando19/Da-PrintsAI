@@ -224,245 +224,158 @@ export const products = [
   },
   {
     id: "b0f17cc5-8b40-4ca5-9142-b61fe3d98c85",
-    image: "images/products/women-stretch-popover-hoodie-black.jpg",
-    name: "Women's Stretch Popover Hoodie",
+    image: "images/products/Underthetree.png",
+    name: "AI Artwork - Under the tree",
     rating: {
       stars: 4.5,
       count: 2465
     },
-    priceCents: 1374,
-    keywords: [
-      "hooded",
-      "hoodies",
-      "sweaters",
-      "womens",
-      "apparel"
-    ],
-    type: "clothing",
-    sizeChartLink: "images/clothing-size-chart.png"
+    priceCents: 360
+
   },
   {
     id: "a93a101d-79ef-4cf3-a6cf-6dbe532a1b4a",
-    image: "images/products/bathroom-rug.jpg",
-    name: "Bathroom Bath Rug Mat 20 x 31 Inch - Grey",
+    image: "images/products/Cyclist.png",
+    name: "AI Artwork - Cyclist",
     rating: {
       stars: 4.5,
       count: 119
     },
-    priceCents: 1250,
-    keywords: [
-      "bathmat",
-      "bathroom",
-      "home"
-    ]
+    priceCents: 360
   },
   {
     id: "4f4fbcc2-4e72-45cc-935c-9e13d79cc57f",
-    image: "images/products/women-knit-ballet-flat-black.jpg",
-    name: "Women's Knit Ballet Flat",
+    image: "images/products/Redflowerfield.png",
+    name: "AI Artwork - Red Flower Field",
     rating: {
       stars: 4,
       count: 326
     },
-    priceCents: 2640,
-    keywords: [
-      "shoes",
-      "flats",
-      "womens",
-      "footwear"
-    ]
+    priceCents: 360
   },
   {
     id: "8b5a2ee1-6055-422a-a666-b34ba28b76d4",
-    image: "images/products/men-golf-polo-t-shirt-blue.jpg",
-    name: "Men's Regular-Fit Quick-Dry Golf Polo Shirt",
+    image: "images/products/Boatwaterfront.png",
+    name: "AI Artwork - Boat Water Front",
     rating: {
       stars: 4.5,
       count: 2556
     },
-    priceCents: 1599,
-    keywords: [
-      "tshirts",
-      "shirts",
-      "apparel",
-      "mens"
-    ],
-    type: "clothing",
-    sizeChartLink: "images/clothing-size-chart.png"
+    priceCents: 360
   },
   {
     id: "b86ddc8b-3501-4b17-9889-a3bad6fb585f",
-    image: "images/products/trash-can-with-foot-pedal-50-liter.jpg",
-    name: "Trash Can with Foot Pedal - Brushed Stainless Steel",
+    image: "images/products/Citybus.png",
+    name: "AI Artwork - Citybus",
     rating: {
       stars: 4.5,
       count: 2286
     },
-    priceCents: 8300,
-    keywords: [
-      "garbage",
-      "bins",
-      "cans",
-      "kitchen"
-    ]
+    priceCents: 360
+
   },
   {
     id: "19c6a64a-5463-4d45-9af8-e41140a4100c",
-    image: "images/products/duvet-cover-set-blue-twin.jpg",
-    name: "Duvet Cover Set with Zipper Closure",
+    image: "images/products/Mountains.png",
+    name: "AI Artwork - Mountains",
     rating: {
       stars: 4,
       count: 456
     },
-    priceCents: 2399,
-    keywords: [
-      "bedroom",
-      "bed sheets",
-      "sheets",
-      "covers",
-      "home"
-    ]
+    priceCents: 360
+
   },
   {
     id: "d2785924-743d-49b3-8f03-ec258e640503",
-    image: "images/products/women-chunky-beanie-gray.webp",
-    name: "Women's Chunky Cable Beanie - Gray",
+    image: "images/products/Pinkfield.png",
+    name: "AI Artwork - Pinkfield",
     rating: {
       stars: 5,
       count: 83
     },
-    priceCents: 1250,
-    keywords: [
-      "hats",
-      "winter hats",
-      "beanies",
-      "tuques",
-      "apparel",
-      "womens"
-    ]
+    priceCents: 360
   },
   {
     id: "ee1f7c56-f977-40a4-9642-12ba5072e2b0",
-    image: "images/products/men-chino-pants-beige.jpg",
-    name: "Men's Classic-fit Pleated Chino Pants",
+    image: "images/products/Beigeflowerfence.png",
+    name: "AI Artwork - Beige flower fence",
     rating: {
       stars: 4.5,
       count: 9017
     },
-    priceCents: 2290,
-    keywords: [
-      "pants",
-      "apparel",
-      "mens"
-    ]
+    priceCents: 360
+
   },
   {
     id: "1c079479-8586-494f-ab53-219325432536",
-    image: "images/products/men-athletic-shoes-green.jpg",
-    name: "Men's Athletic Sneaker",
+    image: "images/products/Backlakeview.png",
+    name: "AI Artwork - Back lakeview",
     rating: {
       stars: 4,
       count: 229
     },
-    priceCents: 3890,
-    keywords: [
-      "shoes",
-      "running shoes",
-      "footwear",
-      "mens"
-    ]
+    priceCents: 360
   },
   {
     id: "4df68c27-fd59-4a6a-bbd1-e754ddb6d53c",
-    image: "images/products/men-navigator-sunglasses-brown.jpg",
-    name: "Men's Navigator Sunglasses Pilot",
+    image: "images/products/Boatdocks.png",
+    name: "AI Artwork - Boatdocks",
     rating: {
       stars: 3.5,
       count: 42
     },
-    priceCents: 1690,
-    keywords: [
-      "sunglasses",
-      "glasses",
-      "accessories",
-      "shades"
-    ]
+    priceCents: 360
   },
   {
     id: "4e37dd03-3b23-4bc6-9ff8-44e112a92c64",
-    image: "images/products/non-stick-cooking-set-15-pieces.webp",
-    name: "Non-Stick Cookware Set, Pots, Pans and Utensils - 15 Pieces",
+    image: "images/products/BackyardLakeview.png",
+    name: "AI Artwork - Backyard Lakeview",
     rating: {
       stars: 4.5,
       count: 511
     },
-    priceCents: 6797,
-    keywords: [
-      "cooking set",
-      "kitchen"
-    ]
+    priceCents: 360
   },
   {
     id: "a434b69f-1bc1-482d-9ce7-cd7f4a66ce8d",
-    image: "images/products/vanity-mirror-silver.jpg",
-    name: "Vanity Mirror with Heavy Base - Chrome",
+    image: "images/products/Barnwindmill.png",
+    name: "Ai Artwork - Barn windmill",
     rating: {
       stars: 4.5,
       count: 130
     },
-    priceCents: 1649,
-    keywords: [
-      "bathroom",
-      "washroom",
-      "mirrors",
-      "home"
-    ]
+    priceCents: 360
   },
   {
     id: "a45cfa0a-66d6-4dc7-9475-e2b01595f7d7",
-    image: "images/products/women-french-terry-fleece-jogger-camo.jpg",
-    name: "Women's Fleece Jogger Sweatpant",
+    image: "images/products/Thefarm.png",
+    name: "AI Artwork - Thefarm",
     rating: {
       stars: 4.5,
       count: 248
     },
-    priceCents: 2400,
-    keywords: [
-      "pants",
-      "sweatpants",
-      "jogging",
-      "apparel",
-      "womens"
-    ]
+    priceCents: 360
+
   },
   {
     id: "d339adf3-e004-4c20-a120-40e8874c66cb",
-    image: "images/products/double-elongated-twist-french-wire-earrings.webp",
-    name: "Double Oval Twist French Wire Earrings - Gold",
+    image: "images/products/Pinktree.png",
+    name: "AI Artwork - Pinktree",
     rating: {
       stars: 4.5,
       count: 117
     },
-    priceCents: 2400,
-    keywords: [
-      "accessories",
-      "womens"
-    ]
+    priceCents: 360
   },
   {
     id: "d37a651a-d501-483b-aae6-a9659b0757a0",
-    image: "images/products/round-airtight-food-storage-containers.jpg",
-    name: "Round Airtight Food Storage Containers - 5 Piece",
+    image: "images/products/Beigeflowerfence2.png",
+    name: "AI Artwork - Beigeflowerfence2",
     rating: {
       stars: 4,
       count: 126
     },
-    priceCents: 2899,
-    keywords: [
-      "boxes",
-      "food containers",
-      "kitchen"
-    ]
+    priceCents: 360
   },
   {
     id: "0d7f9afa-2efe-4fd9-b0fd-ba5663e0a524",
