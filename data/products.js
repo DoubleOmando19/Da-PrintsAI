@@ -491,6 +491,5 @@ export const products = [
       count: 3157
     },
     priceCents: 360
-
   }
-];
+]
