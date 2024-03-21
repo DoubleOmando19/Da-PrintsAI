@@ -104,12 +104,13 @@
 }
 
 .orders-link {
-  color: white;
+  color: black;
 }
 
 .returns-text {
   display: block;
   font-size: 13px;
+  color: black;
 }
 
 .orders-text {
@@ -119,7 +120,7 @@
 }
 
 .cart-link {
-  color: white;
+  color: black;
   display: flex;
   align-items: center;
   position: relative;
@@ -127,16 +128,18 @@
 
 .cart-icon {
   width: 50px;
+  color: black;
 }
 
 .cart-text {
   margin-top: 12px;
   font-size: 15px;
   font-weight: 700;
+  color: black;
 }
 
 .cart-quantity {
-  color: rgb(240, 136, 4);
+  color: lightgreen;
   font-size: 16px;
   font-weight: 700;
 
