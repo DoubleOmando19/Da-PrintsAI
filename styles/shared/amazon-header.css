@@ -130,6 +130,7 @@
 .cart-icon {
   width: 50px;
   color: black;
+  margin-right: 12px;
 }
 
 .cart-text {
@@ -137,6 +138,7 @@
   font-size: 15px;
   font-weight: 700;
   color: black;
+  margin-right: 1px;
 }
 
 .cart-quantity {
