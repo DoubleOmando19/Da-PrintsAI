@@ -1,5 +1,5 @@
 .amazon-header {
-  background-color: bisque;
+  background-color: rgb(252, 206, 149);
   color: white;
   padding-left: 15px;
   padding-right: 15px;
@@ -10,11 +10,12 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 90px;
+  height: 80px;
 }
 
 .amazon-header-left-section {
   width: 180px;
+  margin-top: 1px;
 }
 
 @media (max-width: 800px) {

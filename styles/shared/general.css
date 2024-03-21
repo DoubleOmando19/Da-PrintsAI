@@ -28,7 +28,7 @@ button {
 
 .button-primary {
   color: black;
-  background-color: bisque;
+  background-color: rgb(252, 206, 149);
   border: 1px solid white;
   border-radius: 8px;
   cursor: pointer;
