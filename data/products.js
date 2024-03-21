@@ -379,124 +379,85 @@ export const products = [
   },
   {
     id: "0d7f9afa-2efe-4fd9-b0fd-ba5663e0a524",
-    image: "images/products/coffeemaker-with-glass-carafe-black.jpg",
-    name: "Coffeemaker with Glass Carafe and Reusable Filter - 25 Oz, Black",
+    image: "images/products/Ballooninthejungle.png",
+    name: "AI Artwork - Balloons in the jungle",
     rating: {
       stars: 4.5,
       count: 1211
     },
-    priceCents: 2250,
-    keywords: [
-      "coffeemakers",
-      "kitchen",
-      "appliances"
-    ]
+    priceCents: 360,
+
   },
   {
     id: "02e3a47e-dd68-467e-9f71-8bf6f723fdae",
-    image: "images/products/blackout-curtains-black.jpg",
-    name: "Blackout Curtains Set 42 x 84-Inch - Black, 2 Panels",
+    image: "images/products/Camels.png",
+    name: "AI Artwork - Camels",
     rating: {
       stars: 4.5,
       count: 363
     },
-    priceCents: 3099,
-    keywords: [
-      "bedroom",
-      "home"
-    ]
+    priceCents: 360
+
   },
   {
     id: "8a53b080-6d40-4a65-ab26-b24ecf700bce",
-    image: "images/products/cotton-bath-towels-teal.webp",
-    name: "100% Cotton Bath Towels - 2 Pack, Light Teal",
+    image: "images/products/Polarbearstare.png",
+    name: "AI Artwork - Polar bearstare",
     rating: {
       stars: 4.5,
       count: 93
     },
-    priceCents: 2110,
-    keywords: [
-      "bathroom",
-      "home",
-      "towels"
-    ]
+    priceCents: 360
   },
   {
     id: "10ed8504-57db-433c-b0a3-fc71a35c88a1",
-    image: "images/products/knit-athletic-sneakers-pink.webp",
-    name: "Waterproof Knit Athletic Sneakers - Pink",
+    image: "images/products/Thedawnmoon.png",
+    name: "AI Artwork - The dawn moon",
     rating: {
       stars: 4,
       count: 89
     },
-    priceCents: 3390,
-    keywords: [
-      "shoes",
-      "running shoes",
-      "footwear",
-      "womens"
-    ]
+    priceCents: 360
   },
   {
     id: "77a845b1-16ed-4eac-bdf9-5b591882113d",
-    image: "images/products/countertop-blender-64-oz.jpg",
-    name: "Countertop Blender - 64oz, 1400 Watts",
+    image: "images/products/Redairplane.png",
+    name: "AI Artwork - Red airplane",
     rating: {
       stars: 4,
       count: 3
     },
-    priceCents: 10747,
-    keywords: [
-      "food blenders",
-      "kitchen",
-      "appliances"
-    ]
+    priceCents: 360
   },
   {
     id: "36c64692-677f-4f58-b5ec-0dc2cf109e27",
-    image: "images/products/floral-mixing-bowl-set.jpg",
-    name: "10-Piece Mixing Bowl Set with Lids - Floral",
+    image: "images/products/Cityview.png",
+    name: "AI Artwork - Cityview",
     rating: {
       stars: 5,
       count: 679
     },
-    priceCents: 3899,
-    keywords: [
-      "mixing bowls",
-      "baking",
-      "cookware",
-      "kitchen"
-    ]
+    priceCents: 360
   },
   {
     id: "aaa65ef3-8d6f-4eb3-bc9b-a6ea49047d8f",
-    image: "images/products/kitchen-paper-towels-30-pack.jpg",
-    name: "2-Ply Kitchen Paper Towels - 30 Pack",
+    image: "images/products/Abstractsplash.png",
+    name: "AI Artwork - Abstract splash",
     rating: {
       stars: 4.5,
       count: 1045
     },
-    priceCents: 5799,
-    keywords: [
-      "kitchen",
-      "kitchen towels",
-      "tissues"
-    ]
+    priceCents: 360
   },
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a955",
-    image: "images/products/men-cozy-fleece-zip-up-hoodie-red.jpg",
-    name: "Men's Full-Zip Hooded Fleece Sweatshirt",
+    image: "images/products/Airplanes",
+    name: "AI Artwork - Warplanes",
     rating: {
       stars: 4.5,
       count: 3157
     },
-    priceCents: 2400,
-    keywords: [
-      "sweaters",
-      "hoodies",
-      "apparel",
-      "mens"
-    ]
+    priceCents: 360
+
   }
 ];
