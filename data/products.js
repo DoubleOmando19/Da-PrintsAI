@@ -451,8 +451,41 @@ export const products = [
   },
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a955",
-    image: "images/products/Airplanes",
+    image: "images/products/Airplanes.png",
     name: "AI Artwork - Warplanes",
+    rating: {
+      stars: 4.5,
+      count: 3157
+    },
+    priceCents: 360
+
+  },
+  {
+    id: "bc2847e9-5323-403f-b7cf-57fde044a956",
+    image: "images/products/Balloons.png",
+    name: "AI Artwork - Balloons",
+    rating: {
+      stars: 4.5,
+      count: 3157
+    },
+    priceCents: 360
+
+  },
+  {
+    id: "bc2847e9-5323-403f-b7cf-57fde044a957",
+    image: "images/products/Vflowers.png",
+    name: "AI Artwork - Flowers",
+    rating: {
+      stars: 4.5,
+      count: 3157
+    },
+    priceCents: 360
+
+  },
+  {
+    id: "bc2847e9-5323-403f-b7cf-57fde044a958",
+    image: "images/products/Abstractvibe.png",
+    name: "AI Artwork - Abstract vibe",
     rating: {
       stars: 4.5,
       count: 3157
