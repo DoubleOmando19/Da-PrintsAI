@@ -62,8 +62,8 @@
 
 .amazon-header-middle-section {
   max-width: 850px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 0px;
+  margin-right: 5px;
   display: flex;
   flex-shrink: 0;
   flex-wrap: 0;
@@ -103,6 +103,7 @@
   flex-shrink: 0;
   display: flex;
   justify-content: end;
+  margin-right: 40px;
 }
 
 .orders-link {
@@ -131,7 +132,7 @@
 .cart-icon {
   width: 50px;
   color: black;
-  margin-right: 12px;
+  margin-right: 10px;
 }
 
 .cart-text {
@@ -139,7 +140,6 @@
   font-size: 15px;
   font-weight: 700;
   color: black;
-  margin-right: 0px;
 }
 
 .cart-quantity {
