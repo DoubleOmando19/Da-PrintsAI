@@ -20,7 +20,7 @@ export const products = [
       stars: 4.5,
       count: 87
     },
-    priceCents: 360,
+    priceCents: 299
 
   },
   {
@@ -31,7 +31,7 @@ export const products = [
       stars: 4,
       count: 127
     },
-    priceCents: 360,
+    priceCents: 299
 
   },
   {
@@ -42,9 +42,7 @@ export const products = [
       stars: 4.5,
       count: 56
     },
-    priceCents: 360,
-    type: "clothing",
-    sizeChartLink: "images/clothing-size-chart.png"
+    priceCents: 299
   },
   {
     id: "54e0eccd-8f36-462b-b68a-8182611d9add",
@@ -54,7 +52,7 @@ export const products = [
       stars: 5,
       count: 2197
     },
-    priceCents: 360,
+    priceCents: 299
 
   },
   {
@@ -65,7 +63,7 @@ export const products = [
       stars: 4,
       count: 37
     },
-    priceCents: 360,
+    priceCents: 299
 
   },
   {
@@ -76,7 +74,7 @@ export const products = [
       stars: 4.5,
       count: 175
     },
-    priceCents: 360,
+    priceCents: 299
 
   },
   {
@@ -87,7 +85,7 @@ export const products = [
       stars: 4.5,
       count: 317
     },
-    priceCents: 360,
+    priceCents: 299
 
   },
   {
@@ -98,7 +96,7 @@ export const products = [
       stars: 4.5,
       count: 144
     },
-    priceCents: 360,
+    priceCents: 299
   },
   {
     id: "3fdfe8d6-9a15-4979-b459-585b0d0545b9",
@@ -108,7 +106,7 @@ export const products = [
       stars: 4.5,
       count: 305
     },
-    priceCents: 360,
+    priceCents: 299
 
   },
   {
@@ -119,7 +117,7 @@ export const products = [
       stars: 4,
       count: 89
     },
-    priceCents: 360,
+    priceCents: 299
 
   },
   {
@@ -130,9 +128,7 @@ export const products = [
       stars: 4.5,
       count: 235
     },
-    priceCents: 360,
-    type: "clothing",
-    sizeChartLink: "images/clothing-size-chart.png"
+    priceCents: 299
   },
   {
     id: "aad29d11-ea98-41ee-9285-b916638cac4a",
@@ -142,7 +138,7 @@ export const products = [
       stars: 4.5,
       count: 30
     },
-    priceCents: 360,
+    priceCents: 299
 
   },
   {
@@ -153,7 +149,7 @@ export const products = [
       stars: 4.5,
       count: 562
     },
-    priceCents: 360,
+    priceCents: 299
 
   },
   {
@@ -164,7 +160,7 @@ export const products = [
       stars: 4.5,
       count: 232
     },
-    priceCents: 360,
+    priceCents: 299
 
   },
   {
@@ -175,7 +171,7 @@ export const products = [
       stars: 4,
       count: 160
     },
-    priceCents: 360,
+    priceCents: 299
 
   },
   {
@@ -186,7 +182,7 @@ export const products = [
       stars: 5,
       count: 846
     },
-    priceCents: 360,
+    priceCents: 299
 
   },
   {
@@ -197,7 +193,7 @@ export const products = [
       stars: 4,
       count: 99
     },
-    priceCents: 360,
+    priceCents: 299
 
   },
   {
@@ -208,7 +204,7 @@ export const products = [
       stars: 4,
       count: 215
     },
-    priceCents: 360,
+    priceCents: 299
 
   },
   {
@@ -219,7 +215,7 @@ export const products = [
       stars: 4.5,
       count: 52
     },
-    priceCents: 360,
+    priceCents: 299
 
   },
   {
@@ -230,7 +226,7 @@ export const products = [
       stars: 4.5,
       count: 2465
     },
-    priceCents: 360
+    priceCents: 299
 
   },
   {
@@ -241,7 +237,7 @@ export const products = [
       stars: 4.5,
       count: 119
     },
-    priceCents: 360
+    priceCents: 299
   },
   {
     id: "4f4fbcc2-4e72-45cc-935c-9e13d79cc57f",
@@ -251,7 +247,7 @@ export const products = [
       stars: 4,
       count: 326
     },
-    priceCents: 360
+    priceCents: 299
   },
   {
     id: "8b5a2ee1-6055-422a-a666-b34ba28b76d4",
@@ -261,7 +257,7 @@ export const products = [
       stars: 4.5,
       count: 2556
     },
-    priceCents: 360
+    priceCents: 299
   },
   {
     id: "b86ddc8b-3501-4b17-9889-a3bad6fb585f",
@@ -271,7 +267,7 @@ export const products = [
       stars: 4.5,
       count: 2286
     },
-    priceCents: 360
+    priceCents: 299
 
   },
   {
@@ -282,7 +278,7 @@ export const products = [
       stars: 4,
       count: 456
     },
-    priceCents: 360
+    priceCents: 299
 
   },
   {
@@ -293,7 +289,7 @@ export const products = [
       stars: 5,
       count: 83
     },
-    priceCents: 360
+    priceCents: 299
   },
   {
     id: "ee1f7c56-f977-40a4-9642-12ba5072e2b0",
@@ -303,7 +299,7 @@ export const products = [
       stars: 4.5,
       count: 9017
     },
-    priceCents: 360
+    priceCents: 299
 
   },
   {
@@ -314,7 +310,7 @@ export const products = [
       stars: 4,
       count: 229
     },
-    priceCents: 360
+    priceCents: 299
   },
   {
     id: "4df68c27-fd59-4a6a-bbd1-e754ddb6d53c",
@@ -324,7 +320,7 @@ export const products = [
       stars: 3.5,
       count: 42
     },
-    priceCents: 360
+    priceCents: 299
   },
   {
     id: "4e37dd03-3b23-4bc6-9ff8-44e112a92c64",
@@ -334,7 +330,7 @@ export const products = [
       stars: 4.5,
       count: 511
     },
-    priceCents: 360
+    priceCents: 299
   },
   {
     id: "a434b69f-1bc1-482d-9ce7-cd7f4a66ce8d",
@@ -344,7 +340,7 @@ export const products = [
       stars: 4.5,
       count: 130
     },
-    priceCents: 360
+    priceCents: 299
   },
   {
     id: "a45cfa0a-66d6-4dc7-9475-e2b01595f7d7",
@@ -354,7 +350,7 @@ export const products = [
       stars: 4.5,
       count: 248
     },
-    priceCents: 360
+    priceCents: 299
 
   },
   {
@@ -365,7 +361,7 @@ export const products = [
       stars: 4.5,
       count: 117
     },
-    priceCents: 360
+    priceCents: 299
   },
   {
     id: "d37a651a-d501-483b-aae6-a9659b0757a0",
@@ -375,7 +371,7 @@ export const products = [
       stars: 4,
       count: 126
     },
-    priceCents: 360
+    priceCents: 299
   },
   {
     id: "0d7f9afa-2efe-4fd9-b0fd-ba5663e0a524",
@@ -385,7 +381,7 @@ export const products = [
       stars: 4.5,
       count: 1211
     },
-    priceCents: 360,
+    priceCents: 299
 
   },
   {
@@ -396,7 +392,7 @@ export const products = [
       stars: 4.5,
       count: 363
     },
-    priceCents: 360
+    priceCents: 299
 
   },
   {
@@ -407,7 +403,7 @@ export const products = [
       stars: 4.5,
       count: 93
     },
-    priceCents: 360
+    priceCents: 299
   },
   {
     id: "10ed8504-57db-433c-b0a3-fc71a35c88a1",
@@ -417,7 +413,7 @@ export const products = [
       stars: 4,
       count: 89
     },
-    priceCents: 360
+    priceCents: 299
   },
   {
     id: "77a845b1-16ed-4eac-bdf9-5b591882113d",
@@ -427,7 +423,7 @@ export const products = [
       stars: 4,
       count: 3
     },
-    priceCents: 360
+    priceCents: 299
   },
   {
     id: "36c64692-677f-4f58-b5ec-0dc2cf109e27",
@@ -437,7 +433,7 @@ export const products = [
       stars: 5,
       count: 679
     },
-    priceCents: 360
+    priceCents: 299
   },
   {
     id: "aaa65ef3-8d6f-4eb3-bc9b-a6ea49047d8f",
@@ -447,7 +443,7 @@ export const products = [
       stars: 4.5,
       count: 1045
     },
-    priceCents: 360
+    priceCents: 299
   },
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a955",
@@ -457,7 +453,7 @@ export const products = [
       stars: 4.5,
       count: 3157
     },
-    priceCents: 360
+    priceCents: 299
 
   },
   {
@@ -468,7 +464,7 @@ export const products = [
       stars: 4.5,
       count: 3157
     },
-    priceCents: 360
+    priceCents: 299
 
   },
   {
@@ -479,7 +475,7 @@ export const products = [
       stars: 4.5,
       count: 3157
     },
-    priceCents: 360
+    priceCents: 299
 
   },
   {
@@ -490,6 +486,6 @@ export const products = [
       stars: 4.5,
       count: 3157
     },
-    priceCents: 360
+    priceCents: 299
   }
 ]
