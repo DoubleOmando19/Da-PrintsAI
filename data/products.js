@@ -15,7 +15,7 @@ export const products = [
   {
     id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
     image: "images/products/FallForestTrail.png",
-    name: "AI Artwork - FallTrail",
+    name: "AI Artwork - Fall Trail",
     rating: {
       stars: 4.5,
       count: 87
@@ -26,7 +26,7 @@ export const products = [
   {
     id: "15b6fc6f-327a-4ec4-896f-486349e85a3d",
     image: "images/products/OilTanker.png",
-    name: "AI Artwork - OilTanker",
+    name: "AI Artwork - Oil Tanker",
     rating: {
       stars: 4,
       count: 127
@@ -47,7 +47,7 @@ export const products = [
   {
     id: "54e0eccd-8f36-462b-b68a-8182611d9add",
     image: "images/products/2Birds.png",
-    name: "AI Artwork - TwoBirds",
+    name: "AI Artwork - Two Birds",
     rating: {
       stars: 5,
       count: 2197
@@ -69,7 +69,7 @@ export const products = [
   {
     id: "8c9c52b5-5a19-4bcb-a5d1-158a74287c53",
     image: "images/products/Planetfinger.png",
-    name: "AI Artwork - Planetfinger",
+    name: "AI Artwork - Planet on hand",
     rating: {
       stars: 4.5,
       count: 175
@@ -80,7 +80,7 @@ export const products = [
   {
     id: "dd82ca78-a18b-4e2a-9250-31e67412f98d",
     image: "images/products/Jungletrails.png",
-    name: "AI Artwork - Jungletrails",
+    name: "AI Artwork - Jungle trails",
     rating: {
       stars: 4.5,
       count: 317
@@ -155,7 +155,7 @@ export const products = [
   {
     id: "901eb2ca-386d-432e-82f0-6fb1ee7bf969",
     image: "images/products/Shelfwhite.png",
-    name: "AI Artwork - Shelfwhite",
+    name: "AI Artwork - Shelf white",
     rating: {
       stars: 4.5,
       count: 232
@@ -166,7 +166,7 @@ export const products = [
   {
     id: "82bb68d7-ebc9-476a-989c-c78a40ee5cd9",
     image: "images/products/Tigercharge.png",
-    name: "AI Artwork - Tigercharge",
+    name: "AI Artwork - Tiger charge",
     rating: {
       stars: 4,
       count: 160
@@ -262,7 +262,7 @@ export const products = [
   {
     id: "b86ddc8b-3501-4b17-9889-a3bad6fb585f",
     image: "images/products/Citybus.png",
-    name: "AI Artwork - Citybus",
+    name: "AI Artwork - City bus",
     rating: {
       stars: 4.5,
       count: 2286
@@ -315,7 +315,7 @@ export const products = [
   {
     id: "4df68c27-fd59-4a6a-bbd1-e754ddb6d53c",
     image: "images/products/Boatdocks.png",
-    name: "AI Artwork - Boatdocks",
+    name: "AI Artwork - Boat docks",
     rating: {
       stars: 3.5,
       count: 42
@@ -345,7 +345,7 @@ export const products = [
   {
     id: "a45cfa0a-66d6-4dc7-9475-e2b01595f7d7",
     image: "images/products/Thefarm.png",
-    name: "AI Artwork - Thefarm",
+    name: "AI Artwork - The farm",
     rating: {
       stars: 4.5,
       count: 248
@@ -366,7 +366,7 @@ export const products = [
   {
     id: "d37a651a-d501-483b-aae6-a9659b0757a0",
     image: "images/products/Beigeflowerfence2.png",
-    name: "AI Artwork - Beigeflowerfence2",
+    name: "AI Artwork - Beige flower fence2",
     rating: {
       stars: 4,
       count: 126
@@ -428,7 +428,7 @@ export const products = [
   {
     id: "36c64692-677f-4f58-b5ec-0dc2cf109e27",
     image: "images/products/Cityview.png",
-    name: "AI Artwork - Cityview",
+    name: "AI Artwork - City view",
     rating: {
       stars: 5,
       count: 679
@@ -438,7 +438,7 @@ export const products = [
   {
     id: "aaa65ef3-8d6f-4eb3-bc9b-a6ea49047d8f",
     image: "images/products/Abstractsplash.png",
-    name: "AI Artwork - Abstract splash",
+    name: "AI Artwork - Abstractsplash",
     rating: {
       stars: 4.5,
       count: 1045
