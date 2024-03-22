@@ -127,8 +127,10 @@
 
 .product-quantity-container {
   margin-bottom: 17px;
-  font-size: 14px;
+  font-size: 13px;
   color: rgb(0, 0, 255);
+  box-shadow: 5px 10px 10px white;
+  border: 1px solid white;
 }
 
 .product-spacer {
