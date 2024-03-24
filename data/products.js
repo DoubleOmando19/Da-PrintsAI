@@ -510,16 +510,6 @@ export const products = [
   },
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a961",
-    image: "images/products/Abstractvibe.png",
-    name: "AI Artwork - Abstract vibe",
-    rating: {
-      stars: 4.5,
-      count: 3157
-    },
-    priceCents: 299
-  },
-  {
-    id: "bc2847e9-5323-403f-b7cf-57fde044a962",
     image: "images/products/Phonebooth.png",
     name: "AI Artwork - Phone Booth",
     rating: {
