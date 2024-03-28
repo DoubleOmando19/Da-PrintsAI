@@ -10,29 +10,28 @@ const cors = require('cors')
 app.use(express.json())
 
 app.use(cors({
-  origin: "http://localhost:5500",
+  origin: "http://127.0.0.1:5500/data/products",
 }))
 
 
 const stripe = require('stripe')(process.env.STRIPE_PRIVATE_KEY)
 
-const storeItems = products.json
+const storeItem = products
 
 app.post('/create-checkout-session', async (req, res) => {
-
   try {
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
       mode: 'payment',
       line_items: req.body.items.map(item => {
-        const storeItems = storeItems.get(item.id)
+        const storeItem = storeItem.get(item.id)
         return {
           price_data: {
             currency: 'cad',
             product_data: {
-              name: storeItems.name
+              name: storeItem.name
             },
-            unit_amount: storeItems.priceInCents
+            unit_amount: storeItem.priceInCents
           },
           quantity: item.quantity
         }
@@ -47,5 +46,5 @@ app.post('/create-checkout-session', async (req, res) => {
   res.json({ url: 'hi' })
 })
 
-app.listen(3000)
+app.listen(5500)
 
