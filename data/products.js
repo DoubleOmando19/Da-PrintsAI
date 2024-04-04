@@ -38,9 +38,9 @@ export const products = [
   },
   {
     id: "83d4ca15-0f35-48f5-b7a3-1ea210004f2e",
-    image: "images/products/RaceHorses.png",
-    image1: "/images/New Project picz PDF/RaceHorses.pdf",
-    name: "AI Artwork - Race Horses",
+    image: "images/products/HorseRace.png",
+    image1: "/images/New Project picz PDF/HorseRace.pdf",
+    name: "AI Artwork - The Horse Race",
     rating: {
       stars: 4.5,
       count: 56

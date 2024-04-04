@@ -70,10 +70,8 @@
   padding-bottom: 25px;
   padding-left: 25px;
   padding-right: 25px;
-
   border-right: 1px solid rgb(231, 231, 231);
   border-bottom: 1px solid rgb(231, 231, 231);
-
   display: flex;
   flex-direction: column;
 }
@@ -82,7 +80,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   height: 180px;
   margin-bottom: 20px;
 }
