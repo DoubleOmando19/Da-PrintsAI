@@ -175,7 +175,6 @@
      determined by the elements inside the column (auto).
      The 1st column will take up the remaining space. */
   grid-template-columns: 1fr auto;
-
   font-size: 15px;
   margin-bottom: 9px;
 }
@@ -196,7 +195,6 @@
   color: black;
   font-weight: 700;
   font-size: 18px;
-
   border-top: 1px solid rgb(222, 222, 222);
   padding-top: 18px;
 }
