@@ -109,6 +109,7 @@
 .product-rating-stars {
   width: 100px;
   margin-right: 6px;
+  color: yellow;
 }
 
 .product-rating-count {
