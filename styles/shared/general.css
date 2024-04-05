@@ -27,9 +27,9 @@ button {
 }
 
 .button-primary {
-  color: black;
+  color: rgb(100, 100, 100);
   background-color: rgb(255, 217, 170);
-  border: 2px solid white;
+  border: 1px solid white;
   border-radius: 8px;
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(213, 217, 217, 0.5);
