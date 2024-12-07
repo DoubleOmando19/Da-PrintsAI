@@ -10,7 +10,7 @@ products.forEach((product) => {
     <div class="product-container">
       <div class="product-image-container">
         <img class="product-image" src="${product.image}">
-        <p cursor: pointer; title="Copyright" style="display: flex; font-family: copperplate; margin-top: 180px; margin-left: -50px;">C</p>
+        <p cursor: pointer; title="Copyright 2025 Alcaide's" style="display: flex; font-family: copperplate; margin-top: 180px; margin-left: -50px;">C</p>
       </div>
 
       <div class="product-name limit-text-to-2-lines">
@@ -29,7 +29,7 @@ products.forEach((product) => {
       </div>
       
       <div class="product-quality-container stripe-buy-button">
-        <a style="text-decoration: none; font-family: copperplate; color: black;" href="https://buy.stripe.com/6oE17X4dfe9qgYE4gk">
+        <a style="margin-top: -10px; text-decoration: none; font-family: copperplate; color: black;" href="https://buy.stripe.com/6oE17X4dfe9qgYE4gk">
       </div> 
       
       <div class="product-spacer"></div>
