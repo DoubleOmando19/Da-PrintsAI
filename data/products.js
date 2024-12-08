@@ -606,7 +606,7 @@ export const products = [
     "id": "bc2847e9-5323-403f-b7cf-57fde044a965",
     "image": "images/products/Parrot.png",
     "image1": "/images/New Project picz PDF/Phonebooth.pdf",
-    "name": "AI Artwork - Parrot",
+    "name": "AI Artwork - Parrots",
     "rating": {
       "stars": 4.5,
       "count": 3157
