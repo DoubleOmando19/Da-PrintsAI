@@ -623,7 +623,7 @@ export const products = [
       "count": 3157
     },
     "priceCents": 199
-  }
+  },
   {
     "id": "bc2847e9-5323-403f-b7cf-57fde044a963",
     "image": "images/products/xmastree.jpg",
@@ -634,7 +634,7 @@ export const products = [
       "count": 3157
     },
     "priceCents": 199
-  }
+  },
   {
     "id": "bc2847e9-5323-403f-b7cf-57fde044a964",
     "image": "images/products/babysanta.jpg",
@@ -645,10 +645,10 @@ export const products = [
       "count": 3157
     },
     "priceCents": 199
-  }
+  },
   {
     "id": "bc2847e9-5323-403f-b7cf-57fde044a965",
-    "image": "images/products/Lama.png",
+    "image": "images/products/Lama.jpg",
     "image1": "/images/New Project picz PDF/Phonebooth.pdf",
     "name": "AI Artwork - El Lama",
     "rating": {
