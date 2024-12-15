@@ -59,7 +59,7 @@
 
 @media (max-width: 575px) {
   .products-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -86,6 +86,7 @@
 
 .product-image-container {
   display: flex;
+  flex-direction: row;
   justify-content: left;
   align-items: center;
   height: 300px;
