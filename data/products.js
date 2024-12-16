@@ -620,7 +620,7 @@ export const products = [
     "name": "AI Artwork - Waterfall",
     "rating": {
       "stars": 4.5,
-      "count": 3157
+      "count": 3158
     },
     "priceCents": 199
   },
@@ -628,10 +628,10 @@ export const products = [
     "id": "bc2847e9-5323-403f-b7cf-57fde044a963",
     "image": "images/products/xmastree.jpg",
     "image1": "/images/New Project picz PDF/Phonebooth.pdf",
-    "name": "AI Artwork - XMas Tree",
+    "name": "R1 AI Artwork - XMas Tree",
     "rating": {
       "stars": 4.5,
-      "count": 3157
+      "count": 3151
     },
     "priceCents": 199
   },
@@ -639,20 +639,20 @@ export const products = [
     "id": "bc2847e9-5323-403f-b7cf-57fde044a964",
     "image": "images/products/babysanta.jpg",
     "image1": "/images/New Project picz PDF/Phonebooth.pdf",
-    "name": "AI Artwork - BabySanta",
+    "name": "R1 AI Artwork - BabySanta",
     "rating": {
       "stars": 4.5,
-      "count": 3157
+      "count": 3152
     },
     "priceCents": 199
   },
   {
     "id": "bc2847e9-5323-403f-b7cf-57fde044a965",
     "image": "images/products/Lama.jpg",
-    "name": "AI Artwork - El Lama",
+    "name": "R1 AI Artwork - El Lama",
     "rating": {
       "stars": 4.5,
-      "count": 3157
+      "count": 3156
     },
     "priceCents": 199
   },
