@@ -13,15 +13,16 @@ export function getProduct(productId) {
 
 export const products = [
   {
-    "id": "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
-    "image": "images/products/FallForestTrail.png",
-    "image1": "/images/New Project picz PDF/FallTrail.pdf",
-    "name": "AI Artwork - Fall Trail",
+    "id": "54e0eccd-8f36-462b-b68a-8182611d9add",
+    "image": "images/products/2Birds.png",
+    "image1": "/images/New Project picz PDF/2Birds.pdf",
+    "name": "AI Artwork - Two Birds",
     "rating": {
-      "stars": 4.5,
-      "count": 87
+      "stars": 5,
+      "count": 2197
     },
     "priceCents": 199
+
   },
   {
     "id": "15b6fc6f-327a-4ec4-896f-486349e85a3d",
@@ -33,7 +34,6 @@ export const products = [
       "count": 127
     },
     "priceCents": 199
-
   },
   {
     "id": "83d4ca15-0f35-48f5-b7a3-1ea210004f2e",
@@ -47,16 +47,15 @@ export const products = [
     "priceCents": 199
   },
   {
-    "id": "54e0eccd-8f36-462b-b68a-8182611d9add",
-    "image": "images/products/2Birds.png",
-    "image1": "/images/New Project picz PDF/2Birds.pdf",
-    "name": "AI Artwork - Two Birds",
+    "id": "5968897c-4d27-4872-89f6-5bcb052746d7",
+    "image": "images/products/Abstractmulti.png",
+    "image1": "/images/New Project picz PDF/Abstractmulti.pdf",
+    "name": "AI Artwork - Abstractmulti",
     "rating": {
-      "stars": 5,
-      "count": 2197
+      "stars": 4.5,
+      "count": 235
     },
     "priceCents": 199
-
   },
   {
     "id": "3ebe75dc-64d2-4137-8860-1f5a963e534b",
@@ -126,13 +125,13 @@ export const products = [
     "priceCents": 199
   },
   {
-    "id": "5968897c-4d27-4872-89f6-5bcb052746d7",
-    "image": "images/products/Abstractmulti.png",
-    "image1": "/images/New Project picz PDF/Abstractmulti.pdf",
-    "name": "AI Artwork - Abstractmulti",
+    "id": "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
+    "image": "images/products/FallForestTrail.png",
+    "image1": "/images/New Project picz PDF/FallTrail.pdf",
+    "name": "AI Artwork - Fall Trail",
     "rating": {
       "stars": 4.5,
-      "count": 235
+      "count": 87
     },
     "priceCents": 199
   },
@@ -146,7 +145,6 @@ export const products = [
       "count": 30
     },
     "priceCents": 199
-
   },
   {
     "id": "04701903-bc79-49c6-bc11-1af7e3651358",
@@ -158,7 +156,6 @@ export const products = [
       "count": 562
     },
     "priceCents": 199
-
   },
   {
     "id": "901eb2ca-386d-432e-82f0-6fb1ee7bf969",
