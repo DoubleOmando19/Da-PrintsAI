@@ -105,7 +105,7 @@
 
 .product-name {
   height: 40px;
-  margin-bottom: 5px;
+
   font-size: 21px;
   font-family: fantasy;
   /*font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;*/
@@ -116,7 +116,6 @@
 
 .product-rating-container {
   align-items: center;
-  margin-bottom: 10px;
   text-decoration: none;
   margin-top: 0px;
 }
@@ -135,7 +134,7 @@
 
 .product-price {
   font-size: 17px;
-  margin-bottom: 10px;
+
   text-decoration: none;
   font-family: fantasy;
   /*font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -152,7 +151,6 @@
 }
 
 .product-quantity-container {
-  margin-bottom: 17px;
   font-size: 13px;
   color: rgb(0, 0, 255);
   box-shadow: 5px 10px 10px white;
@@ -186,7 +184,7 @@
 .add-to-cart-button {
   margin-left: 50px;
   width: 150px;
-  padding: 3;
+  padding: 3px;
   border-radius: 50px;
   justify-content: center;
   align-items: center;
