@@ -45,13 +45,13 @@
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1300px) {
   .products-grid {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 670px) {
   .products-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -78,8 +78,7 @@
   border-right: 1px solid white;
   border-bottom: 1px solid white;
   display: grid;
-  align-items: center;
-  justify-content: center;
+  grid-template-columns: column;
   text-decoration: none;
   margin-top: 1px;
 }
