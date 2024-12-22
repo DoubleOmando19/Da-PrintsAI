@@ -646,7 +646,7 @@ export const products = [
   {
     "id": "bc2847e9-5323-403f-b7cf-57fde044a965",
     "image": "images/products/Lama.jpg",
-    "name": "R1 AI Artwork - El Lama",
+    "name": "R1 AI Artwork - El Alpaca",
     "rating": {
       "stars": 4.5,
       "count": 3156
