@@ -16,7 +16,7 @@ export const products = [
     "id": "54e0eccd-8f36-462b-b68a-8182611d9add",
     "image": "images/products/2Birds.png",
     "image1": "/images/New Project picz PDF/2Birds.pdf",
-    "name": "AI Artwork - Two Birds",
+    "name": "AI Artwork - Toucans",
     "rating": {
       "stars": 5,
       "count": 2197
