@@ -16,9 +16,10 @@
        8 times (instead of typing out "1fr" 8 times).
        repeat(...) is a special property that works with
        display: grid; */
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   text-decoration: none;
-  vertical-align: top;
+  justify-content: left;
+  align-items: start;
 }
 
 /* @media is used to create responsive design (making the
@@ -45,25 +46,25 @@
   }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1000px) {
   .products-grid {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
-@media (max-width: 670px) {
+@media (max-width: 800px) {
   .products-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 600px) {
   .products-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .products-grid {
     grid-template-columns: 1fr;
   }
@@ -84,7 +85,6 @@
 }
 
 .product-image-container {
-  display: flex;
   justify-content: left;
   align-items: center;
   height: 300px;
@@ -113,7 +113,6 @@
 }
 
 .product-rating-container {
-  display: flex;
   align-items: center;
   margin-bottom: 10px;
   text-decoration: none;
