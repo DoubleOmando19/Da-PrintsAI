@@ -1,7 +1,5 @@
 .main {
   margin-top: 60px;
-  text-decoration: none;
-  background-color: whitesmoke;
 }
 
 .products-grid {
@@ -16,10 +14,7 @@
        8 times (instead of typing out "1fr" 8 times).
        repeat(...) is a special property that works with
        display: grid; */
-  grid-template-columns: repeat(3, 1fr);
-  text-decoration: none;
-  justify-content: left;
-  align-items: start;
+  grid-template-columns: repeat(8, 1fr);
 }
 
 /* @media is used to create responsive design (making the
@@ -58,39 +53,38 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 575px) {
   .products-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 450px) {
   .products-grid {
     grid-template-columns: 1fr;
   }
 }
 
 .product-container {
-  margin-left: 80px;
   padding-top: 40px;
   padding-bottom: 25px;
-  padding-left: 50px;
+  padding-left: 25px;
   padding-right: 25px;
-  border-right: 1px solid white;
-  border-bottom: 1px solid white;
-  display: grid;
-  grid-template-columns: column;
-  text-decoration: none;
-  margin-top: 1px;
+
+  border-right: 1px solid rgb(231, 231, 231);
+  border-bottom: 1px solid rgb(231, 231, 231);
+
+  display: flex;
+  flex-direction: column;
 }
 
 .product-image-container {
-  justify-content: left;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  height: 300px;
-  width: 300px;
-  margin-bottom: 15px;
-  text-decoration: none;
+
+  height: 180px;
+  margin-bottom: 20px;
 }
 
 .product-image {
@@ -99,62 +93,37 @@
     so they stay inside their container. */
   max-width: 100%;
   max-height: 100%;
-  height: 300px;
-  text-decoration: none;
 }
 
 .product-name {
   height: 40px;
   margin-bottom: 5px;
-  font-size: 17px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: bold;
-  text-decoration: none;
 }
 
 .product-rating-container {
+  display: flex;
   align-items: center;
   margin-bottom: 10px;
-  text-decoration: none;
-  margin-top: 0px;
 }
 
 .product-rating-stars {
   width: 100px;
   margin-right: 6px;
-  color: yellow;
 }
 
 .product-rating-count {
   color: rgb(1, 124, 182);
   cursor: pointer;
-  margin-top: 0px;
+  margin-top: 3px;
 }
 
 .product-price {
-  font-size: 17px;
-  margin-bottom: 10px;
-  text-decoration: none;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
-
-.stripe-buy-button {
   font-weight: 700;
-  margin-bottom: 5px;
-  text-decoration: none;
-  display: grid;
-  margin-top: 0px;
-  width: 10px;
+  margin-bottom: 10px;
 }
 
 .product-quantity-container {
   margin-bottom: 17px;
-  font-size: 13px;
-  color: rgb(0, 0, 255);
-  box-shadow: 5px 10px 10px white;
-  border: 1px solid whitesmoke;
-  text-decoration: none;
 }
 
 .product-spacer {
@@ -164,10 +133,10 @@
 .added-to-cart {
   color: rgb(6, 125, 98);
   font-size: 16px;
+
   display: flex;
   align-items: center;
   margin-bottom: 8px;
-  text-decoration: none;
 
   /* At first, the "Added to cart" message will
      be invisible. Use JavaScript to change the
@@ -176,8 +145,8 @@
 }
 
 .added-to-cart img {
-  height: 25px;
-  margin-right: 10px;
+  height: 20px;
+  margin-right: 5px;
 }
 
 .add-to-cart-button {
