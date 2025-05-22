@@ -1,9 +1,9 @@
 export function getProduct(productId) {
   let matchingProduct;
 
-  products.forEach((product) => {
+  products.forEach((Product) => {
     if (product.id === productId) {
-      matchingProduct = product;
+      matchingProduct = Product;
     }
   });
 
