@@ -27,17 +27,19 @@ button {
 }
 
 .button-primary {
-  color: rgb(33, 33, 33);
-  background-color: rgb(255, 216, 20);
-  border: 1px solid rgb(252, 210, 0);
+  color: white;
+  background-color: lightskyblue;
+  border: 1px solid lightskyblue;
   border-radius: 8px;
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(213, 217, 217, 0.5);
+  transition: 2s;
 }
 
 .button-primary:hover {
-  background-color: rgb(247, 202, 0);
-  border: 1px solid rgb(242, 194, 0);
+  background-color: rgb(33, 33, 254);
+  border: 1px solid lightskyblue;
+  transition: 2s;
 }
 
 .button-primary:active {
