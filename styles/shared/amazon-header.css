@@ -35,7 +35,7 @@
 }
 
 .amazon-logo {
-  width: 100px;
+  width: 90px;
   margin-top: 5px;
 }
 
@@ -50,7 +50,7 @@
 
   .amazon-mobile-logo {
     display: block;
-    height: 35px;
+    height: 30px;
     margin-top: 5px;
   }
 }
@@ -135,11 +135,9 @@
   color: rgb(240, 136, 4);
   font-size: 16px;
   font-weight: 700;
-
   position: absolute;
   top: 4px;
   left: 22px;
-
   width: 26px;
   text-align: center;
 }
