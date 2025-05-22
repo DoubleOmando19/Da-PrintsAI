@@ -27,17 +27,18 @@ button {
 }
 
 .button-primary {
-  color: white;
-  background-color: lightskyblue;
+  color: lightskyblue;
+  font-weight: bold;
+  background-color: white;
   border: 1px solid lightskyblue;
   border-radius: 8px;
   cursor: pointer;
-  box-shadow: 0 2px 5px rgba(213, 217, 217, 0.5);
-  transition: 2s;
+  transition: 1s;
 }
 
 .button-primary:hover {
-  background-color: rgb(33, 33, 254);
+  color: white;
+  background-color: lightskyblue;
   border: 1px solid lightskyblue;
   transition: 2s;
 }
