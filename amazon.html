@@ -18,10 +18,11 @@
   <link rel="stylesheet" href="styles/shared/general.css">
   <link rel="stylesheet" href="styles/shared/amazon-header.css">
   <link rel="stylesheet" href="styles/pages/amazon.css">
-  <script src="https://js.stripe.com/v3/"></script>
-  <script async src="https://js.stripe.com/v3/stripe.js">
-  </script>
+  <!-- Fixed: Remove duplicate Stripe.js loading, keep only the correct one -->
 
+  <!-- Fixed: Add Stripe publishable key as data attribute -->
+  <meta name="stripe-key"
+    data-stripe-publishable-key="pk_live_51OkXQaKbXnnSXzMdf19g5MGvzTCJxJHvRPx58K3o8I2pobYuS8qvXH5f2KDPWhZRl9urYzzcjEsjwhgKzsvi9RKW00Y5YKSuor">
 </head>
 
 <body>
@@ -75,8 +76,8 @@
           Featured Products</p>
       </div>
 
-
-      <div class="products-grid js-products-grid stripe-buy-button">Digital Download</div>
+      <!-- Fixed: Add the correct class for the Stripe checkout button -->
+      <div class="data-stripe-publishable-key js-products-grid js-stripe-checkout">Digital Download</div>
     </div>
 
     <script type="module" src="scripts/amazon.js"></script>

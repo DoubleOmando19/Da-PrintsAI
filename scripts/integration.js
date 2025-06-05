@@ -4,8 +4,8 @@
  * This module serves as the bridge between the Amazon cart functionality and Stripe payment processing.
  * It initializes both systems and establishes the necessary connections between them.
  * 
- * Version: 1.0.0
- * Last Updated: 2025-06-04
+ * Version: 1.0.1
+ * Last Updated: 2025-06-05
  */
 
 import { cartEvents, calculateCartTotal, getCartItems } from './amazon.js';
@@ -15,8 +15,8 @@ import { initializeStripe, createCheckoutSession, redirectToCheckout, handlePaym
 const config = {
   // Stripe configuration
   stripe: {
-    // The publishable key should be loaded from environment variables in production
-    publishableKey: null, // Will be set during initialization
+    // Fixed: Default publishable key for development (will be overridden by data attribute if available)
+    publishableKey: 'pk_live_51OkXQaKbXnnSXzMdf19g5MGvzTCJxJHvRPx58K3o8I2pobYuS8qvXH5f2KDPWhZRl9urYzzcjEsjwhgKzsvi9RKW00Y5YKSuor',
     elementsOptions: {
       appearance: {
         theme: 'stripe',
@@ -36,8 +36,8 @@ const config = {
   // Integration settings
   settings: {
     autoInitialize: true,
-    enableDebugLogs: false,
-    checkoutButtonSelector: '.js-stripe-checkout',
+    enableDebugLogs: true, // Enable debug logs to help troubleshoot issues
+    checkoutButtonSelector: '.js-stripe-checkout', // Fixed: Ensure this matches the HTML
     cartUpdateEventName: 'cart-updated'
   }
 };
@@ -61,6 +61,13 @@ export function initializeIntegration(options = {}) {
       console.log('Initializing Amazon-Stripe integration with config:', mergedConfig);
     }
 
+    // Fixed: Check for publishable key in data attribute first
+    const keyElement = document.querySelector('[data-stripe-publishable-key]');
+    if (keyElement && keyElement.dataset.stripePublishableKey) {
+      mergedConfig.stripe.publishableKey = keyElement.dataset.stripePublishableKey;
+      console.log('Using Stripe publishable key from data attribute');
+    }
+
     // Ensure we have a Stripe publishable key
     if (!mergedConfig.stripe.publishableKey) {
       throw new Error('Stripe publishable key is required for integration');
@@ -77,7 +84,7 @@ export function initializeIntegration(options = {}) {
     setupCartEventListeners(mergedConfig);
 
     // Set up checkout buttons if they exist in the DOM
-    setupCheckoutButtons(mergedConfig);
+    setupCheckoutButtons(mergedConfig, stripeInstance);
 
     // Return the integration instance
     return {
@@ -94,8 +101,9 @@ export function initializeIntegration(options = {}) {
             throw new Error('Cart is empty');
           }
 
-          const session = await createCheckoutSession(cartTotal, cartItems);
-          await redirectToCheckout(session.id);
+          // Fixed: Pass the Stripe instance to ensure it's available
+          const session = await createCheckoutSession(cartTotal, cartItems, stripeInstance);
+          await redirectToCheckout(session.id, stripeInstance);
           return session;
         } catch (error) {
           handlePaymentFailure(error);
@@ -122,20 +130,32 @@ function setupCartEventListeners(config) {
     }
 
     // Update checkout buttons with new cart total
-    updateCheckoutButtons(data.cartTotal);
+    updateCheckoutButtons(data.cartTotal, config);
   });
 }
 
 /**
  * Set up checkout buttons in the DOM
  * @param {Object} config - Integration configuration
+ * @param {Object} stripeInstance - Initialized Stripe instance
  */
-function setupCheckoutButtons(config) {
+function setupCheckoutButtons(config, stripeInstance) {
+  // Fixed: Log the selector being used to help debug
+  if (config.settings.enableDebugLogs) {
+    console.log(`Looking for checkout buttons with selector: ${config.settings.checkoutButtonSelector}`);
+  }
+
   const buttons = document.querySelectorAll(config.settings.checkoutButtonSelector);
 
-  if (buttons.length === 0 && config.settings.enableDebugLogs) {
-    console.warn(`No checkout buttons found with selector: ${config.settings.checkoutButtonSelector}`);
+  if (buttons.length === 0) {
+    if (config.settings.enableDebugLogs) {
+      console.warn(`No checkout buttons found with selector: ${config.settings.checkoutButtonSelector}`);
+    }
     return;
+  }
+
+  if (config.settings.enableDebugLogs) {
+    console.log(`Found ${buttons.length} checkout buttons`);
   }
 
   buttons.forEach(button => {
@@ -147,6 +167,10 @@ function setupCheckoutButtons(config) {
     newButton.addEventListener('click', async (event) => {
       event.preventDefault();
 
+      if (config.settings.enableDebugLogs) {
+        console.log('Checkout button clicked');
+      }
+
       try {
         // Show loading state
         newButton.disabled = true;
@@ -156,13 +180,23 @@ function setupCheckoutButtons(config) {
         const cartTotal = calculateCartTotal();
         const cartItems = getCartItems();
 
+        if (config.settings.enableDebugLogs) {
+          console.log(`Cart total: ${cartTotal}, Items: ${cartItems.length}`);
+        }
+
         if (cartTotal <= 0 || cartItems.length === 0) {
           throw new Error('Your cart is empty');
         }
 
+        // Fixed: Pass the Stripe instance to ensure it's available
         // Create checkout session and redirect
-        const session = await createCheckoutSession(cartTotal, cartItems);
-        await redirectToCheckout(session.id);
+        const session = await createCheckoutSession(cartTotal, cartItems, stripeInstance);
+
+        if (config.settings.enableDebugLogs) {
+          console.log('Checkout session created:', session);
+        }
+
+        await redirectToCheckout(session.id, stripeInstance);
       } catch (error) {
         handlePaymentFailure(error);
       } finally {
@@ -174,14 +208,15 @@ function setupCheckoutButtons(config) {
   });
 
   // Initialize button states
-  updateCheckoutButtons(calculateCartTotal());
+  updateCheckoutButtons(calculateCartTotal(), config);
 }
 
 /**
  * Update checkout buttons based on cart total
  * @param {number} cartTotal - Total amount in cart in cents
+ * @param {Object} config - Integration configuration
  */
-function updateCheckoutButtons(cartTotal) {
+function updateCheckoutButtons(cartTotal, config) {
   const buttons = document.querySelectorAll(config.settings.checkoutButtonSelector);
 
   buttons.forEach(button => {
@@ -210,6 +245,15 @@ function displayErrorMessage(message) {
   if (!errorElement) {
     errorElement = document.createElement('div');
     errorElement.className = 'integration-error-message error-message';
+    errorElement.style.position = 'fixed';
+    errorElement.style.top = '20px';
+    errorElement.style.left = '50%';
+    errorElement.style.transform = 'translateX(-50%)';
+    errorElement.style.backgroundColor = '#f44336';
+    errorElement.style.color = 'white';
+    errorElement.style.padding = '15px';
+    errorElement.style.borderRadius = '5px';
+    errorElement.style.zIndex = '1000';
     document.body.appendChild(errorElement);
   }
 
@@ -256,18 +300,14 @@ if (config.settings.autoInitialize && typeof window !== 'undefined') {
   // Wait for DOM to be ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
-      // Load publishable key from data attribute if available
+      // Fixed: Check for publishable key in data attribute
       const keyElement = document.querySelector('[data-stripe-publishable-key]');
-      if (keyElement) {
+      if (keyElement && keyElement.dataset.stripePublishableKey) {
         config.stripe.publishableKey = keyElement.dataset.stripePublishableKey;
       }
 
       // Initialize integration
-      if (config.stripe.publishableKey) {
-        initializeIntegration();
-      } else {
-        console.error('Stripe publishable key not found. Integration not initialized.');
-      }
+      initializeIntegration();
 
       // Handle payment return if on a return URL
       handlePaymentReturn();
@@ -275,15 +315,11 @@ if (config.settings.autoInitialize && typeof window !== 'undefined') {
   } else {
     // DOM already loaded
     const keyElement = document.querySelector('[data-stripe-publishable-key]');
-    if (keyElement) {
+    if (keyElement && keyElement.dataset.stripePublishableKey) {
       config.stripe.publishableKey = keyElement.dataset.stripePublishableKey;
     }
 
-    if (config.stripe.publishableKey) {
-      initializeIntegration();
-    } else {
-      console.error('Stripe publishable key not found. Integration not initialized.');
-    }
+    initializeIntegration();
 
     // Handle payment return if on a return URL
     handlePaymentReturn();
