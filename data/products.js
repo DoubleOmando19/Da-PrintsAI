@@ -885,16 +885,6 @@ export const products = [
     priceCents: 199
   },
   {
-    id: "bc2847e9-5323-403f-b7cf-57fde044a986",
-    image: "images/products/Elephant.jpg",
-    name: "R1 AI Artwork - Elephant",
-    rating: {
-      stars: 4.5,
-      count: 3198
-    },
-    priceCents: 199
-  },
-  {
     id: "bc2847e9-5323-403f-b7cf-57fde044a987",
     image: "images/products/Russa.jpg",
     name: "R1 AI Artwork - La Russa",
