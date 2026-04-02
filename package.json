@@ -1,0 +1,19 @@
+{
+  "name": "da-prints-ai",
+  "version": "2.0.0",
+  "description": "DA Prints AI - Generative AI Artwork E-commerce with Stripe multi-item checkout and email delivery",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node backend/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.7",
+    "stripe": "^14.11.0"
+  },
+  "keywords": ["stripe", "e-commerce", "ai-art", "digital-downloads"],
+  "license": "ISC"
+}
