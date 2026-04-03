@@ -206,10 +206,12 @@ async function handleSuccessfulPayment(session) {
     const mailOptions = {
       from: process.env.EMAIL_FROM || 'DA Prints AI <noreply@daprintsai.com>',
       to: customerEmail,
+      replyTo: process.env.SMTP_USER,
+      headers: { 'X-Mailer': 'DA Prints AI', 'X-Priority': '3' },
       subject: 'Your DA Prints AI Purchase - Digital Downloads',
       text: `Thank you for your purchase from DA Prints AI!\n\nOrder Summary:\n${itemsList}\n\nTotal: $${totalAmount}\n\nYour purchased digital artwork PDF(s) are attached to this email.\n\nPlease note:\n- All images are Generative AI artwork\n- All images are copyright protected\n- All images come in PDF format\n- Perfect for wallpaper, thumbnails, screensavers, or small frames (4x6 or 5x7)\n\nThank you for shopping with DA Prints AI!\n\nBest regards,\nDA Prints AI Team`,
       html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+        <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Order Confirmation</title></head><body style="margin:0;padding:20px;background-color:#f4f4f4;"><div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #333; border-bottom: 2px solid #eee; padding-bottom: 10px;">
             Thank you for your purchase from DA Prints AI!
           </h2>
@@ -247,6 +249,7 @@ async function handleSuccessfulPayment(session) {
             <em>DA Prints AI Team</em>
           </p>
         </div>
+</body></html>
       `,
       attachments: attachments
     };
