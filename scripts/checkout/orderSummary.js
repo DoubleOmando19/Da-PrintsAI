@@ -59,9 +59,9 @@ export function renderOrderSummary() {
               <span>
                 Quantity: 
                 <select class="js-quantity-select" data-product-id="${matchingProduct.id}" style="padding: 2px 5px; font-size: 14px;">
-                  ${[1,2,3,4,5,6,7,8,9,10].map(n => 
-                    `<option value="${n}" ${n === cartItem.quantity ? 'selected' : ''}>${n}</option>`
-                  ).join('')}
+                  ${[1].map(n =>
+      `<option value="${n}" ${n === cartItem.quantity ? 'selected' : ''}>${n}</option>`
+    ).join('')}
                 </select>
               </span>
               <span class="delete-quantity-link link-primary js-delete-link js-delete-link-${matchingProduct.id}" data-product-id="${matchingProduct.id}">

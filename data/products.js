@@ -192,7 +192,7 @@ export const products = [
     id: "901eb2ca-386d-432e-82f0-6fb1ee7bf969",
     image: "images/products/Shelfwhite.png",
     image1: "/images/New Project picz PDF/Shelfwhite.pdf",
-    name: "AI Artwork - Shelf white",
+    name: "AI Artwork - WhiteShelf",
     rating: {
       stars: 4.5,
       count: 232
@@ -216,7 +216,7 @@ export const products = [
     id: "c2a82c5e-aff4-435f-9975-517cfaba2ece",
     image: "images/products/Designer.png",
     image1: "/images/New Project picz PDF/Designer.pdf",
-    name: "AI Artwork - Shelf Design",
+    name: "AI Artwork - BookShelf",
     rating: {
       stars: 5,
       count: 846
