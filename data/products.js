@@ -32,8 +32,8 @@ class Product {
 
 const product1 = new Product({
   id: "54e0eccd-8f36-462b-b68a-8182611d9add",
-  image: "images/products/2Birds.png",
-  image1: "/images/New Project picz PDF/2Birds.pdf",
+  image: "images/products/Touvans.png",
+  image1: "/images/New Project picz PDF/Toucans.pdf",
   name: "AI Artwork - Toucans",
   rating: {
     stars: 5,
@@ -46,8 +46,8 @@ const product1 = new Product({
 export const products = [
   {
     id: "54e0eccd-8f36-462b-b68a-8182611d9add",
-    image: "images/products/2Birds.png",
-    image1: "/images/New Project picz PDF/ 2Birds.pdf",
+    image: "images/products/Toucans.png",
+    image1: "/images/New Project picz PDF/ Toucans.pdf",
     name: "AI Artwork - Toucans",
     rating: {
       stars: 5,
@@ -600,7 +600,7 @@ export const products = [
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a962",
     image: "images/products/Buffalo.png",
-    image1: "/images/New Project picz PDF/Phonebooth.pdf",
+    image1: "/images/New Project picz PDF/Buffalo.pdf",
     name: "AI Artwork - Buffalo",
     rating: {
       stars: 4.5,
@@ -611,7 +611,7 @@ export const products = [
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a963",
     image: "images/products/Canaries.png",
-    image1: "/images/New Project picz PDF/Phonebooth.pdf",
+    image1: "/images/New Project picz PDF/Canaries.pdf",
     name: "AI Artwork - Canaries",
     rating: {
       stars: 4.5,
@@ -622,7 +622,7 @@ export const products = [
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a964",
     image: "images/products/Bonzai.png",
-    image1: "/images/New Project picz PDF/Phonebooth.pdf",
+    image1: "/images/New Project picz PDF/Bonzai.pdf",
     name: "AI Artwork - Bonzai",
     rating: {
       stars: 4.5,
@@ -633,7 +633,7 @@ export const products = [
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a965",
     image: "images/products/Parrot.png",
-    image1: "/images/New Project picz PDF/Phonebooth.pdf",
+    image1: "/images/New Project picz PDF/Parrots.pdf",
     name: "AI Artwork - Parrots",
     rating: {
       stars: 4.5,
@@ -644,7 +644,7 @@ export const products = [
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a962",
     image: "images/products/Waterfall.png",
-    image1: "/images/New Project picz PDF/Phonebooth.pdf",
+    image1: "/images/New Project picz PDF/Waterfall.pdf.pdf",
     name: "AI Artwork - Waterfall",
     rating: {
       stars: 4.5,
@@ -655,7 +655,7 @@ export const products = [
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a963",
     image: "images/products/xmastree.jpg",
-    image1: "/images/New Project picz PDF/Phonebooth.pdf",
+    image1: "/images/New Project picz PDF/xmastree.pdf",
     name: "R1 AI Artwork - XMas Tree",
     rating: {
       stars: 4.5,
@@ -666,7 +666,7 @@ export const products = [
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a964",
     image: "images/products/babysanta.jpg",
-    image1: "/images/New Project picz PDF/Phonebooth.pdf",
+    image1: "/images/New Project picz PDF/babysanta.pdf",
     name: "R1 AI Artwork - BabySanta",
     rating: {
       stars: 4.5,
@@ -676,7 +676,8 @@ export const products = [
   },
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a965",
-    image: "images/products/Lama.jpg",
+    image: "images/products/Alpaca.jpg",
+    image1: "/images/New Project picz PDF/Alpaca.pdf",
     name: "R1 AI Artwork - El Alpaca",
     rating: {
       stars: 4.5,
@@ -687,6 +688,7 @@ export const products = [
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a966",
     image: "images/products/lilMickey.jpg",
+    image1: "/images/New Project picz PDF/mcd.pdf",
     name: "R1 AI Artwork - Lil Mickey",
     rating: {
       stars: 4.5,
@@ -697,6 +699,7 @@ export const products = [
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a967",
     image: "images/products/crystalcat.jpg",
+    image1: "/images/New Project picz PDF/crystalcat.pdf",
     name: "R1 AI Artwork - Crystal Cat",
     rating: {
       stars: 4.5,
@@ -707,6 +710,7 @@ export const products = [
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a968",
     image: "images/products/blueangel.jpg",
+    image1: "/images/New Project picz PDF/blueangel.pdf",
     name: "R1 AI Artwork - Blue angel",
     rating: {
       stars: 4.5,
@@ -716,7 +720,8 @@ export const products = [
   },
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a9669",
-    image: "images/products/2-bird.jpg",
+    image: "images/products/2Birds.jpg",
+    image1: "/images/New Project picz PDF/2Birds.pdf",
     name: "R1 AI Artwork - El Toucan",
     rating: {
       stars: 4.5,
@@ -727,6 +732,7 @@ export const products = [
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a970",
     image: "images/products/Minimouse.jpg",
+    image1: "/images/New Project picz PDF/MINIBEAR.pdf",
     name: "R1 AI Artwork - Mini mouse",
     rating: {
       stars: 4.5,
@@ -737,6 +743,7 @@ export const products = [
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a971",
     image: "images/products/Nemo.jpg",
+    image1: "/images/New Project picz PDF/nemo.pdf",
     name: "R1 AI Artwork - El Nemo",
     rating: {
       stars: 4.5,
@@ -747,6 +754,7 @@ export const products = [
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a972",
     image: "images/products/soccerball.jpg",
+    image1: "/images/New Project picz PDF/.pdf",
     name: "R1 AI Artwork - Futbol",
     rating: {
       stars: 4.5,
@@ -757,6 +765,7 @@ export const products = [
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a973",
     image: "images/products/Bball.jpg",
+    image1: "/images/New Project picz PDF/Bball.pdf",
     name: "R1 AI Artwork - Basketball",
     rating: {
       stars: 4.5,
@@ -767,6 +776,7 @@ export const products = [
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a974",
     image: "images/products/multicolorbear.jpg",
+    image1: "/images/New Project picz PDF/multicolorbear.pdf",
     name: "R1 AI Artwork - The Bear",
     rating: {
       stars: 4.5,
@@ -777,6 +787,7 @@ export const products = [
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a975",
     image: "images/products/Jack2.jpg",
+    image1: "/images/New Project picz PDF/Jack2.pdf",
     name: "R1 AI Artwork - Jack",
     rating: {
       stars: 4.5,
@@ -787,6 +798,7 @@ export const products = [
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a976",
     image: "images/products/MickieD.jpg",
+    image1: "/images/New Project picz PDF/mcd1.pdf",
     name: "R1 AI Artwork - MickieDee",
     rating: {
       stars: 4.5,
@@ -797,6 +809,7 @@ export const products = [
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a977",
     image: "images/products/angel.jpg",
+    image1: "/images/New Project picz PDF/angel.pdf",
     name: "R1 AI Artwork - Angel",
     rating: {
       stars: 4.5,
@@ -807,6 +820,7 @@ export const products = [
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a978",
     image: "images/products/Supermario.jpg",
+    image1: "/images/New Project picz PDF/Supermario.pdf",
     name: "R1 AI Artwork - Supermario",
     rating: {
       stars: 4.5,
@@ -817,6 +831,7 @@ export const products = [
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a979",
     image: "images/products/Theride.jpg",
+    image1: "/images/New Project picz PDF/Theride.pdf",
     name: "AI Artwork - El Rodeo",
     rating: {
       stars: 4.5,
@@ -827,6 +842,7 @@ export const products = [
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a980",
     image: "images/products/Monchichi.jpg",
+    image1: "/images/New Project picz PDF/Monchichi.pdf",
     name: "R1 AI Artwork - Mon chi-chi",
     rating: {
       stars: 4.5,
@@ -837,6 +853,7 @@ export const products = [
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a981",
     image: "images/products/Nemo1.jpg",
+    image1: "/images/New Project picz PDF/Nemo1.pdf",
     name: "AI Artwork - Aquarium",
     rating: {
       stars: 4.5,
@@ -847,6 +864,7 @@ export const products = [
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a982",
     image: "images/products/Roboto1.jpg",
+    image1: "/images/New Project picz PDF/Roboto1.pdf",
     name: "R1 AI Artwork - Roboto7",
     rating: {
       stars: 4.5,
@@ -857,6 +875,7 @@ export const products = [
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a983",
     image: "images/products/rabbit.jpg",
+    image1: "/images/New Project picz PDF/rabbit.pdf",
     name: "R1 AI Artwork - El Rabbit",
     rating: {
       stars: 4.5,
@@ -867,6 +886,7 @@ export const products = [
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a984",
     image: "images/products/silverelephant.jpg",
+    image1: "/images/New Project picz PDF/silverelephant.pdf",
     name: "R1 AI Artwork - Silver Elephant",
     rating: {
       stars: 4.5,
@@ -877,6 +897,7 @@ export const products = [
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a985",
     image: "images/products/swan.jpg",
+    image1: "/images/New Project picz PDF/swan.pdf",
     name: "R1 AI Artwork - Swan",
     rating: {
       stars: 4.5,
@@ -887,6 +908,7 @@ export const products = [
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a987",
     image: "images/products/Russa.jpg",
+    image1: "/images/New Project picz PDF/Russa.pdf",
     name: "R1 AI Artwork - La Russa",
     rating: {
       stars: 4.5,
@@ -897,6 +919,7 @@ export const products = [
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a988",
     image: "images/products/Mario.jpg",
+    image1: "/images/New Project picz PDF/supermario4.pdf",
     name: "AI Artwork - MarioWorld",
     rating: {
       stars: 4.5,
@@ -907,6 +930,7 @@ export const products = [
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a989",
     image: "images/products/2angels.jpg",
+    image1: "/images/New Project picz PDF/2angels.pdf",
     name: "AI Artwork - Angels",
     rating: {
       stars: 4.5,
