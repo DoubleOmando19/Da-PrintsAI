@@ -32,7 +32,7 @@ class Product {
 
 const product1 = new Product({
   id: "54e0eccd-8f36-462b-b68a-8182611d9add",
-  image: "images/products/Touvans.png",
+  image: "images/products/Toucans.png",
   image1: "/images/New Project picz PDF/Toucans.pdf",
   name: "AI Artwork - Toucans",
   rating: {
@@ -47,7 +47,7 @@ export const products = [
   {
     id: "54e0eccd-8f36-462b-b68a-8182611d9add",
     image: "images/products/Toucans.png",
-    image1: "/images/New Project picz PDF/ Toucans.pdf",
+    image1: "/images/New Project picz PDF/Toucans.pdf",
     name: "AI Artwork - Toucans",
     rating: {
       stars: 5,
@@ -341,7 +341,7 @@ export const products = [
   {
     id: "ee1f7c56-f977-40a4-9642-12ba5072e2b0",
     image: "images/products/Beigeflowerfence.png",
-    image1: "/images/New Project picz PDF/Beigeflowerfence.pdf",
+    image1: "/images/New Project picz PDF/Beigeflowerfence2.pdf",
     name: "AI Artwork - Beige flower fence",
     rating: {
       stars: 4.5,
@@ -375,7 +375,7 @@ export const products = [
   {
     id: "4e37dd03-3b23-4bc6-9ff8-44e112a92c64",
     image: "images/products/BackyardLakeview.png",
-    image1: "/images/New Project picz PDF/Backyardlakeview.pdf",
+    image1: "/images/New Project picz PDF/Backyardview.pdf",
     name: "AI Artwork - Backyard Lakeview",
     rating: {
       stars: 4.5,
@@ -442,7 +442,7 @@ export const products = [
   {
     id: "0d7f9afa-2efe-4fd9-b0fd-ba5663e0a524",
     image: "images/products/Ballooninthejungle.png",
-    image1: "/images/New Project picz PDF/Balloonsinthejungle.pdf",
+    image1: "/images/New Project picz PDF/Ballooninthejungle.pdf",
     name: "AI Artwork - Balloons in the jungle",
     rating: {
       stars: 4.5,
@@ -644,7 +644,7 @@ export const products = [
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a962",
     image: "images/products/Waterfall.png",
-    image1: "/images/New Project picz PDF/Waterfall.pdf.pdf",
+    image1: "/images/New Project picz PDF/Waterfall.pdf",
     name: "AI Artwork - Waterfall",
     rating: {
       stars: 4.5,
