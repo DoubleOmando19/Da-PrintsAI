@@ -45,7 +45,7 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 // Configure email transporter
 const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST || 'smtp.gmail.com',
+  host: process.env.SMTP_HOST || 'smtp-relay.brevo.com',
   port: parseInt(process.env.SMTP_PORT) || 587,
   secure: false,
   auth: {
