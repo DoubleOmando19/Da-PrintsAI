@@ -687,9 +687,9 @@ export const products = [
   },
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a966",
-    image: "images/products/lilMickey.jpg",
-    image1: "/images/New Project picz PDF/mcd.pdf",
-    name: "R1 AI Artwork - Lil Mickey",
+    image: "images/products/Eagle.png",
+    image1: "/images/New Project picz PDF/Eagle.pdf",
+    name: "R1 AI Artwork - The Eagle",
     rating: {
       stars: 4.5,
       count: 3160
