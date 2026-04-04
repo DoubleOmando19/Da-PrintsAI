@@ -78,7 +78,7 @@ app.post('/api/create-checkout-session', async (req, res) => {
         currency: 'usd',
         product_data: {
           name: item.name,
-          images: item.image ? [`${process.env.BASE_URL || 'http://localhost:5500'}/${item.image}`] : [],
+          images: item.image ? [`${process.env.BASE_URL || 'http://localhost:3000'}/${item.image}`] : [],
           metadata: {
             product_id: item.id,
             pdf_path: item.image1 || ''
@@ -107,8 +107,8 @@ app.post('/api/create-checkout-session', async (req, res) => {
         })))
       },
       // Redirect URLs after payment
-      success_url: `${process.env.BASE_URL || 'http://localhost:5500'}/checkout.html?session_id={CHECKOUT_SESSION_ID}&status=success`,
-      cancel_url: `${process.env.BASE_URL || 'http://localhost:5500'}/checkout.html?status=cancelled`,
+      success_url: `${process.env.BASE_URL || 'http://localhost:3000'}/checkout.html?session_id={CHECKOUT_SESSION_ID}&status=success`,
+      cancel_url: `${process.env.BASE_URL || 'http://localhost:3000'}/checkout.html?status=cancelled`,
     });
 
     res.json({ id: session.id, url: session.url });
