@@ -68,21 +68,19 @@
         <p style="padding: 2px;">* After payment, your purchased pictures will be emailed to you as PDF attachments.</p>
       </div>
     </div>
-  </div>
-    <!-- Initialize Stripe with publishable key from server -->
+  </div>    <!-- Initialize Stripe with publishable key -->
     <script>
-        // Fetch the Stripe publishable key from the backend to avoid hardcoding secrets
-        // Store the promise on window so ES modules can await it
-        window.stripePromise = fetch("/api/config")
-        	.then(r => r.json())
-        	.then(data => {
-        		window.stripe = Stripe(data.publishableKey);
-        		return window.stripe;
-        	})
-        	.catch(err => {
-        		console.error("Failed to load Stripe config:", err);
-        		return null;
-        	});
+    // Initialize Stripe directly with publishable key
+    // (pk_live_ keys are designed to be public - safe for client-side code)
+    try {
+        window.stripe = Stripe('pk_live_51OkX0aKbXnnSXzMdf19g5MGvzTCJxJHvRPx58K3o8I2pobYuS8qvXH5f2KDPWhZRl9urYzzcjEsjwhqKzsvi9RKW00Y5YKSuor');
+        window.stripePromise = Promise.resolve(window.stripe);
+        console.log('Stripe initialized successfully');
+    } catch(err) {
+        console.error('Failed to initialize Stripe:', err);
+        window.stripe = null;
+        window.stripePromise = Promise.resolve(null);
+    }
     </script>
 
   <!-- Load checkout scripts -->
