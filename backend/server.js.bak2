@@ -41,11 +41,6 @@ app.use(cors());
 // Serve static files (the frontend)
 app.use(express.static(path.join(__dirname, '..')));
 
-// Serve Stripe publishable key to frontend (avoids hardcoding in HTML)
-app.get("/api/config", (req, res) => {
-  res.json({ publishableKey: process.env.STRIPE_PUBLISHABLE_KEY });
-});
-
 // Initialize Stripe with the secret key
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
@@ -58,6 +53,7 @@ const transporter = nodemailer.createTransport({
     user: process.env.SMTP_USER,
     pass: process.env.SMTP_PASS,
   },
+    tls: { rejectUnauthorized: true },
 });
 
 // Verify SMTP connection on startup
@@ -179,11 +175,76 @@ async function handleSuccessfulPayment(session) {
       return;
     }
 
-    // Parse the purchased items from the session metadata
-    const orderItems = JSON.parse(session.metadata.order_items || '[]');
+    // Load products from products.json for server-side PDF path lookup
+    const productsData = JSON.parse(fs.readFileSync(path.join(__dirname, 'products.json'), 'utf8'));
+    const productMap = {};
+    productsData.forEach(p => { productMap[p.id] = p; });
+
+    // Retrieve line items from Stripe API (bypasses 500-char metadata limit)
+    let lineItems = [];
+    try {
+      const lineItemsResponse = await stripe.checkout.sessions.listLineItems(session.id, {
+        limit: 100,
+        expand: ['data.price.product']
+      });
+      lineItems = lineItemsResponse.data;
+      console.log('Retrieved', lineItems.length, 'line items from Stripe for session', session.id);
+    } catch (stripeErr) {
+      console.error('Error retrieving line items from Stripe:', stripeErr.message);
+    }
+
+    // Build order items from Stripe line items + server-side product lookup
+    let orderItems = [];
+
+    if (lineItems.length > 0) {
+      for (const li of lineItems) {
+        const product = li.price?.product;
+        const productId = product?.metadata?.product_id;
+        const pdfPathMeta = product?.metadata?.pdf_path;
+        const localProduct = productId ? productMap[productId] : null;
+
+        orderItems.push({
+          id: productId || product?.id || 'unknown',
+          name: product?.name || li.description || 'Unknown Item',
+          quantity: li.quantity || 1,
+          priceCents: li.amount_total || 0,
+          image1: localProduct?.image1 || pdfPathMeta || ''
+        });
+      }
+    }
+
+    // Fallback: try session metadata if Stripe line items approach failed
+    if (orderItems.length === 0 && session.metadata?.order_items) {
+      try {
+        const metadataItems = JSON.parse(session.metadata.order_items);
+        if (Array.isArray(metadataItems) && metadataItems.length > 0) {
+          orderItems = metadataItems;
+          console.log('Falling back to session metadata for order items');
+        }
+      } catch (parseErr) {
+        console.error('Failed to parse order_items metadata:', parseErr.message);
+      }
+    }
+
+    // Second fallback: look up by product name in products.json
+    if (orderItems.length === 0 && lineItems.length > 0) {
+      for (const li of lineItems) {
+        const itemName = li.description || li.price?.product?.name || '';
+        const matchedProduct = productsData.find(p => p.name === itemName);
+        if (matchedProduct) {
+          orderItems.push({
+            id: matchedProduct.id,
+            name: matchedProduct.name,
+            quantity: li.quantity || 1,
+            priceCents: li.amount_total || 0,
+            image1: matchedProduct.image1 || ''
+          });
+        }
+      }
+    }
 
     if (orderItems.length === 0) {
-      console.error('No order items found in session metadata:', session.id);
+      console.error('No order items found for session:', session.id);
       return;
     }
 
@@ -197,10 +258,10 @@ async function handleSuccessfulPayment(session) {
         const pdfPath = path.join(__dirname, '..', item.image1);
         const fileName = path.basename(item.image1);
 
-            if (!fs.existsSync(pdfPath)) {
-                console.error('PDF file not found:', pdfPath);
-                continue;
-            }
+        if (!fs.existsSync(pdfPath)) {
+          console.error('PDF file not found:', pdfPath);
+          continue;
+        }
         attachments.push({
           filename: fileName,
           path: pdfPath,
@@ -214,56 +275,43 @@ async function handleSuccessfulPayment(session) {
       `- ${item.name} (Qty: ${item.quantity}) - $${(item.priceCents / 100).toFixed(2)} each`
     ).join('\n');
 
-    const totalAmount = (session.amount_total / 100).toFixed(2);
+    const totalAmount = session.amount_total
+      ? (session.amount_total / 100).toFixed(2)
+      : orderItems.reduce((sum, i) => sum + (i.priceCents * i.quantity), 0) / 100;
 
-    // Send the email with the purchased pictures
     const mailOptions = {
-      from: process.env.EMAIL_FROM || 'DA Prints AI <noreply@daprintsai.com>',
+      from: '"DA Prints AI" <da.prints.ai@gmail.com>',
       to: customerEmail,
-      replyTo: process.env.SMTP_USER,
-      headers: { 'X-Mailer': 'DA Prints AI', 'X-Priority': '3' },
-      subject: 'Your DA Prints AI Purchase - Digital Downloads',
-      text: `Thank you for your purchase from DA Prints AI!\n\nOrder Summary:\n${itemsList}\n\nTotal: $${totalAmount}\n\nYour purchased digital artwork PDF(s) are attached to this email.\n\nPlease note:\n- All images are Generative AI artwork\n- All images are copyright protected\n- All images come in PDF format\n- Perfect for wallpaper, thumbnails, screensavers, or small frames (4x6 or 5x7)\n\nThank you for shopping with DA Prints AI!\n\nBest regards,\nDA Prints AI Team`,
+      subject: `Your DA Prints AI Order Confirmation - ${orderItems.length} Picture(s)`,
       html: `
-        <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Order Confirmation</title></head><body style="margin:0;padding:20px;background-color:#f4f4f4;"><div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #333; border-bottom: 2px solid #eee; padding-bottom: 10px;">
-            Thank you for your purchase from DA Prints AI!
-          </h2>
-          
-          <h3>Order Summary:</h3>
-          <ul style="list-style: none; padding: 0;">
-            ${orderItems.map(item => `
-              <li style="padding: 8px 0; border-bottom: 1px solid #eee;">
-                <strong>${item.name}</strong><br>
-                Quantity: ${item.quantity} | Price: $${(item.priceCents / 100).toFixed(2)} each
-              </li>
-            `).join('')}
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #2c3e50;">Thank You for Your Purchase!</h2>
+          <p>Hi there,</p>
+          <p>Your payment of <strong>$${totalAmount}</strong> has been received.</p>
+
+          <h3 style="color: #2c3e50;">Order Details:</h3>
+          <pre style="background: #f8f9fa; padding: 15px; border-radius: 5px;">${itemsList}</pre>
+
+          <p>Your purchased picture(s) are attached to this email as PDF files.</p>
+
+          <div style="background: #e8f5e9; padding: 15px; border-radius: 5px; margin: 20px 0;">
+            <strong>Attachments:</strong> ${attachments.length} PDF file(s) attached
+          </div>
+
+          <p>Please note:</p>
+          <ul>
+            <li>All images are Generative AI artwork</li>
+            <li>All images are copyright protected</li>
+            <li>All images come in PDF format</li>
+            <li>Perfect for wallpaper, thumbnails, screensavers, or small frames (4x6 or 5x7)</li>
           </ul>
-          
-          <p style="font-size: 18px; font-weight: bold; color: #333;">
-            Total: $${totalAmount}
-          </p>
-          
-          <div style="background: #f5f5f5; padding: 15px; border-radius: 5px; margin: 20px 0;">
-            <p style="margin: 0 0 10px 0;"><strong>Your purchased digital artwork PDF(s) are attached to this email.</strong></p>
-          </div>
-          
-          <div style="font-size: 12px; color: #666; margin-top: 20px;">
-            <p>Please note:</p>
-            <ul>
-              <li>All images are Generative AI artwork</li>
-              <li>All images are copyright protected</li>
-              <li>All images come in PDF format</li>
-              <li>Perfect for wallpaper, thumbnails, screensavers, or small frames (4x6 or 5x7)</li>
-            </ul>
-          </div>
-          
+
           <p style="color: #333; margin-top: 20px;">
             Thank you for shopping with DA Prints AI!<br>
             <em>DA Prints AI Team</em>
           </p>
         </div>
-</body></html>
+      </body></html>
       `,
       attachments: attachments
     };
@@ -275,6 +323,7 @@ async function handleSuccessfulPayment(session) {
     console.error('Error handling successful payment:', error);
   }
 }
+
 
 /**
  * GET /api/session-status
