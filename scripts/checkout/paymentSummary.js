@@ -74,8 +74,9 @@ export function renderPaymentSummary() {
       const statusEl = document.querySelector('.js-payment-status');
 
       try {
-        // Check if Stripe is available
-        if (typeof stripe === 'undefined') {
+        // Wait for Stripe to initialize from the config fetch
+        const stripe = await window.stripePromise;
+        if (!stripe) {
           throw new Error('Stripe has not been initialized. Please refresh the page.');
         }
 
@@ -94,7 +95,7 @@ export function renderPaymentSummary() {
 
         // Create a Stripe Checkout Session on the server
         // This supports purchasing multiple pictures in a single transaction
-        const response = await fetch('http://localhost:3000/api/create-checkout-session', {
+        const response = await fetch('/api/create-checkout-session', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

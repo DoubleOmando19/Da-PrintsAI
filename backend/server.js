@@ -21,7 +21,7 @@
  *   BASE_URL=http://localhost:5500
  */
 
-require('dotenv').config();
+require('dotenv').config({ path: require('path').join(__dirname, '..', '.env') });
 const express = require('express');
 const cors = require('cors');
 const path = require('path');

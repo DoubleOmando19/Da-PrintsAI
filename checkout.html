@@ -72,11 +72,17 @@
     <!-- Initialize Stripe with publishable key from server -->
     <script>
         // Fetch the Stripe publishable key from the backend to avoid hardcoding secrets
-        let stripe;
-        fetch("/api/config")
-          .then(r => r.json())
-          .then(data => { stripe = Stripe(data.publishableKey); })
-          .catch(err => console.error("Failed to load Stripe config:", err));
+        // Store the promise on window so ES modules can await it
+        window.stripePromise = fetch("/api/config")
+        	.then(r => r.json())
+        	.then(data => {
+        		window.stripe = Stripe(data.publishableKey);
+        		return window.stripe;
+        	})
+        	.catch(err => {
+        		console.error("Failed to load Stripe config:", err);
+        		return null;
+        	});
     </script>
 
   <!-- Load checkout scripts -->

@@ -11,7 +11,7 @@
  * @returns {boolean} True if Stripe is available
  */
 export function isStripeReady() {
-  return typeof stripe !== 'undefined' && stripe !== null;
+  return typeof window.stripe !== 'undefined' && window.stripe !== null;
 }
 
 /**
