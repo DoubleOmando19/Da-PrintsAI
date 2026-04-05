@@ -73,7 +73,7 @@
     // Initialize Stripe directly with publishable key
     // (pk_live_ keys are designed to be public - safe for client-side code)
     try {
-        window.stripe = Stripe('pk_live_51OkX0aKbXnnSXzMdf19g5MGvzTCJxJHvRPx58K3o8I2pobYuS8qvXH5f2KDPWhZRl9urYzzcjEsjwhqKzsvi9RKW00Y5YKSuor');
+        window.stripe = Stripe('pk_live_51OkXQaKbXnnSXzMdf19g5MGvzTCJxJHvRPx58K3o8I2pobYuS8qvXH5f2KDPWhZRl9urYzzcjEsjwhgKzsvi9RKW00Y5YKSuor');
         window.stripePromise = Promise.resolve(window.stripe);
         console.log('Stripe initialized successfully');
     } catch(err) {
