@@ -68,7 +68,7 @@
 
 .product-container {
   margin-left: 30px;
-  padding-top: 40px;
+  padding-top: 30px;
   padding-bottom: 25px;
   padding-left: 25px;
   padding-right: 25px;
@@ -90,7 +90,7 @@
     so they stay inside their container. */
   width: 250px;
   height: 250px;
-  margin-right: 160px;
+  margin-right: 170px;
   transition: 5s;
 }
 
