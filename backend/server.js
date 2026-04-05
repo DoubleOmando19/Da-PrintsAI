@@ -11,7 +11,7 @@
  *   npm install express stripe nodemailer cors dotenv
  * 
  * Environment variables (create a .env file):
- *   STRIPE_SECRET_KEY=your_stripe_secret_key
+ *  Your Stripe secret API key
  *   STRIPE_WEBHOOK_SECRET=your_stripe_webhook_secret
  *   SMTP_HOST=smtp.gmail.com
  *   SMTP_PORT=587
@@ -66,8 +66,8 @@ const transporter = nodemailer.createTransport({
 
 // Verify SMTP connection on startup
 transporter.verify()
-    .then(() => console.log('SMTP connection verified successfully (Brevo)'))
-    .catch((err) => console.error('SMTP connection error:', err.message));
+  .then(() => console.log('SMTP connection verified successfully (Brevo)'))
+  .catch((err) => console.error('SMTP connection error:', err.message));
 /**
  * POST /api/create-checkout-session
  * 
@@ -201,10 +201,10 @@ async function handleSuccessfulPayment(session) {
         const pdfPath = path.join(__dirname, '..', item.image1);
         const fileName = path.basename(item.image1);
 
-            if (!fs.existsSync(pdfPath)) {
-                console.error('PDF file not found:', pdfPath);
-                continue;
-            }
+        if (!fs.existsSync(pdfPath)) {
+          console.error('PDF file not found:', pdfPath);
+          continue;
+        }
         attachments.push({
           filename: fileName,
           path: pdfPath,
