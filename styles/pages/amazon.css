@@ -167,7 +167,8 @@
   body > p,
   p[style*="font-size: 40px"] {
     font-size: 28px !important;
-    margin-top: -30px !important;
+    margin-top: -50px !important;
+    line-height: 1.0 !important;
     white-space: normal !important;
     text-align: center !important;
     justify-content: center !important;
