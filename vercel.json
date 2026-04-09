@@ -18,7 +18,58 @@
       ]
     },
     {
+      "source": "/apple-touch-icon-precomposed.png",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        },
+        {
+          "key": "Pragma",
+          "value": "no-cache"
+        },
+        {
+          "key": "Expires",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "source": "/apple-touch-icon-v3.png",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        },
+        {
+          "key": "Pragma",
+          "value": "no-cache"
+        },
+        {
+          "key": "Expires",
+          "value": "0"
+        }
+      ]
+    },
+    {
       "source": "/apple-touch-icon-v4.png",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        },
+        {
+          "key": "Pragma",
+          "value": "no-cache"
+        },
+        {
+          "key": "Expires",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "source": "/apple-touch-icon-v5.png",
       "headers": [
         {
           "key": "Cache-Control",
@@ -52,7 +103,7 @@
       ]
     },
     {
-      "source": "/favicon.svg",
+      "source": "/favicon-v3.ico",
       "headers": [
         {
           "key": "Cache-Control",
@@ -86,7 +137,75 @@
       ]
     },
     {
+      "source": "/favicon-v5.ico",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        },
+        {
+          "key": "Pragma",
+          "value": "no-cache"
+        },
+        {
+          "key": "Expires",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "source": "/favicon.svg",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        },
+        {
+          "key": "Pragma",
+          "value": "no-cache"
+        },
+        {
+          "key": "Expires",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "source": "/favicon-v3.svg",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        },
+        {
+          "key": "Pragma",
+          "value": "no-cache"
+        },
+        {
+          "key": "Expires",
+          "value": "0"
+        }
+      ]
+    },
+    {
       "source": "/favicon-v4.svg",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        },
+        {
+          "key": "Pragma",
+          "value": "no-cache"
+        },
+        {
+          "key": "Expires",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "source": "/favicon-v5.svg",
       "headers": [
         {
           "key": "Cache-Control",
@@ -120,24 +239,7 @@
       ]
     },
     {
-      "source": "/favicon-32x32.png",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-cache, no-store, must-revalidate"
-        },
-        {
-          "key": "Pragma",
-          "value": "no-cache"
-        },
-        {
-          "key": "Expires",
-          "value": "0"
-        }
-      ]
-    },
-    {
-      "source": "/favicon-192x192.png",
+      "source": "/favicon-16x16-v3.png",
       "headers": [
         {
           "key": "Cache-Control",
@@ -171,6 +273,57 @@
       ]
     },
     {
+      "source": "/favicon-16x16-v5.png",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        },
+        {
+          "key": "Pragma",
+          "value": "no-cache"
+        },
+        {
+          "key": "Expires",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "source": "/favicon-32x32.png",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        },
+        {
+          "key": "Pragma",
+          "value": "no-cache"
+        },
+        {
+          "key": "Expires",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "source": "/favicon-32x32-v3.png",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        },
+        {
+          "key": "Pragma",
+          "value": "no-cache"
+        },
+        {
+          "key": "Expires",
+          "value": "0"
+        }
+      ]
+    },
+    {
       "source": "/favicon-32x32-v4.png",
       "headers": [
         {
@@ -188,7 +341,75 @@
       ]
     },
     {
+      "source": "/favicon-32x32-v5.png",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        },
+        {
+          "key": "Pragma",
+          "value": "no-cache"
+        },
+        {
+          "key": "Expires",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "source": "/favicon-192x192.png",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        },
+        {
+          "key": "Pragma",
+          "value": "no-cache"
+        },
+        {
+          "key": "Expires",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "source": "/favicon-192x192-v3.png",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        },
+        {
+          "key": "Pragma",
+          "value": "no-cache"
+        },
+        {
+          "key": "Expires",
+          "value": "0"
+        }
+      ]
+    },
+    {
       "source": "/favicon-192x192-v4.png",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        },
+        {
+          "key": "Pragma",
+          "value": "no-cache"
+        },
+        {
+          "key": "Expires",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "source": "/favicon-192x192-v5.png",
       "headers": [
         {
           "key": "Cache-Control",
@@ -225,39 +446,69 @@
   "redirects": [
     {
       "source": "/apple-touch-icon-v3.png",
-      "destination": "/apple-touch-icon-v4.png?t=1775750522",
+      "destination": "/apple-touch-icon-v5.png?t=1775761637",
       "statusCode": 302
     },
     {
       "source": "/favicon-v3.ico",
-      "destination": "/favicon-v4.ico?t=1775750522",
+      "destination": "/favicon-v5.ico?t=1775761637",
       "statusCode": 302
     },
     {
       "source": "/favicon-v3.svg",
-      "destination": "/favicon-v4.svg?t=1775750522",
+      "destination": "/favicon-v5.svg?t=1775761637",
       "statusCode": 302
     },
     {
       "source": "/favicon-16x16-v3.png",
-      "destination": "/favicon-16x16-v4.png?t=1775750522",
+      "destination": "/favicon-16x16-v5.png?t=1775761637",
       "statusCode": 302
     },
     {
       "source": "/favicon-32x32-v3.png",
-      "destination": "/favicon-32x32-v4.png?t=1775750522",
+      "destination": "/favicon-32x32-v5.png?t=1775761637",
       "statusCode": 302
     },
     {
       "source": "/favicon-192x192-v3.png",
-      "destination": "/favicon-192x192-v4.png?t=1775750522",
+      "destination": "/favicon-192x192-v5.png?t=1775761637",
+      "statusCode": 302
+    },
+    {
+      "source": "/apple-touch-icon-v4.png",
+      "destination": "/apple-touch-icon-v5.png?t=1775761637",
+      "statusCode": 302
+    },
+    {
+      "source": "/favicon-v4.ico",
+      "destination": "/favicon-v5.ico?t=1775761637",
+      "statusCode": 302
+    },
+    {
+      "source": "/favicon-v4.svg",
+      "destination": "/favicon-v5.svg?t=1775761637",
+      "statusCode": 302
+    },
+    {
+      "source": "/favicon-16x16-v4.png",
+      "destination": "/favicon-16x16-v5.png?t=1775761637",
+      "statusCode": 302
+    },
+    {
+      "source": "/favicon-32x32-v4.png",
+      "destination": "/favicon-32x32-v5.png?t=1775761637",
+      "statusCode": 302
+    },
+    {
+      "source": "/favicon-192x192-v4.png",
+      "destination": "/favicon-192x192-v5.png?t=1775761637",
       "statusCode": 302
     }
   ],
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://api.daprintsai.live/:path*"
+      "destination": "https://api.example.com/:path*"
     }
   ]
 }
