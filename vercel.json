@@ -7,7 +7,7 @@
   ],
   "headers": [
     {
-      "source": "/apple-touch-icon-v3.png",
+      "source": "/apple-touch-icon-v4.png",
       "headers": [
         {
           "key": "Cache-Control",
@@ -41,7 +41,7 @@
       ]
     },
     {
-      "source": "/favicon-v3.ico",
+      "source": "/favicon-v4.ico",
       "headers": [
         {
           "key": "Cache-Control",
@@ -58,7 +58,7 @@
       ]
     },
     {
-      "source": "/favicon-v3.svg",
+      "source": "/favicon-v4.svg",
       "headers": [
         {
           "key": "Cache-Control",
@@ -109,7 +109,7 @@
       ]
     },
     {
-      "source": "/favicon-16x16-v3.png",
+      "source": "/favicon-16x16-v4.png",
       "headers": [
         {
           "key": "Cache-Control",
@@ -126,7 +126,7 @@
       ]
     },
     {
-      "source": "/favicon-32x32-v3.png",
+      "source": "/favicon-32x32-v4.png",
       "headers": [
         {
           "key": "Cache-Control",
@@ -143,7 +143,7 @@
       ]
     },
     {
-      "source": "/favicon-192x192-v3.png",
+      "source": "/favicon-192x192-v4.png",
       "headers": [
         {
           "key": "Cache-Control",
@@ -231,32 +231,62 @@
   "redirects": [
     {
       "source": "/apple-touch-icon.png",
-      "destination": "/apple-touch-icon-v3.png?t=1775748279",
+      "destination": "/apple-touch-icon-v4.png?t=1775749761",
       "statusCode": 302
     },
     {
       "source": "/favicon.ico",
-      "destination": "/favicon-v3.ico?t=1775748279",
+      "destination": "/favicon-v4.ico?t=1775749761",
       "statusCode": 302
     },
     {
       "source": "/favicon.svg",
-      "destination": "/favicon-v3.svg?t=1775748279",
+      "destination": "/favicon-v4.svg?t=1775749761",
       "statusCode": 302
     },
     {
       "source": "/favicon-16x16.png",
-      "destination": "/favicon-16x16-v3.png?t=1775748279",
+      "destination": "/favicon-16x16-v4.png?t=1775749761",
       "statusCode": 302
     },
     {
       "source": "/favicon-32x32.png",
-      "destination": "/favicon-32x32-v3.png?t=1775748279",
+      "destination": "/favicon-32x32-v4.png?t=1775749761",
       "statusCode": 302
     },
     {
       "source": "/favicon-192x192.png",
-      "destination": "/favicon-192x192-v3.png?t=1775748279",
+      "destination": "/favicon-192x192-v4.png?t=1775749761",
+      "statusCode": 302
+    },
+    {
+      "source": "/apple-touch-icon-v3.png",
+      "destination": "/apple-touch-icon-v4.png?t=1775749761",
+      "statusCode": 302
+    },
+    {
+      "source": "/favicon-v3.ico",
+      "destination": "/favicon-v4.ico?t=1775749761",
+      "statusCode": 302
+    },
+    {
+      "source": "/favicon-v3.svg",
+      "destination": "/favicon-v4.svg?t=1775749761",
+      "statusCode": 302
+    },
+    {
+      "source": "/favicon-16x16-v3.png",
+      "destination": "/favicon-16x16-v4.png?t=1775749761",
+      "statusCode": 302
+    },
+    {
+      "source": "/favicon-32x32-v3.png",
+      "destination": "/favicon-32x32-v4.png?t=1775749761",
+      "statusCode": 302
+    },
+    {
+      "source": "/favicon-192x192-v3.png",
+      "destination": "/favicon-192x192-v4.png?t=1775749761",
       "statusCode": 302
     }
   ]
