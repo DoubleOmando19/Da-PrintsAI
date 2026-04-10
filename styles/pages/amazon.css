@@ -170,7 +170,7 @@
   body > p,
   p[style*="font-size: 40px"] {
     font-size: 28px !important;
-    margin-top: -55px !important;
+    margin-top: -60px !important;
     line-height: 1.0 !important;
     white-space: normal !important;
     text-align: center !important;
@@ -208,7 +208,7 @@
     text-align: center !important;
     display: block !important;
     line-height: 1.2 !important;
-    margin-top: -45px !important;
+    margin-top: -50px !important;
     height: auto;
   }
 
