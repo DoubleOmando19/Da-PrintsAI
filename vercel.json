@@ -296,11 +296,5 @@
       "destination": "/favicon-192x192-v5.png?t=1775791996",
       "statusCode": 302
     }
-  ],
-  "rewrites": [
-    {
-      "source": "/api/:path*",
-      "destination": "https://api.example.com/:path*"
-    }
   ]
 }
