@@ -230,3 +230,10 @@
     margin-top: -60px !important;
   }
 }
+
+/* Mobile override: raise browse heading text by 20px */
+@media (max-width: 480px) {
+    .browse-heading {
+          margin-top: -80px !important;
+    }
+}
