@@ -5,7 +5,7 @@ const path = require("path");
 const projectRoot = __dirname;
 
 const PORT = 3000;
-const URL = "http://localhost:" + PORT + "/amazon.html";
+const URL = "http://localhost:" + PORT + "/index.html";
 
 // Open the default browser based on platform
 function openBrowser(url) {
