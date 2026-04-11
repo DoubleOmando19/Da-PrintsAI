@@ -363,5 +363,5 @@ app.get('/health', (req, res) => {
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`DA Prints AI server running on port ${PORT}`);
-  console.log(`Open http://localhost:${PORT}/amazon.html to view the store`);
+  console.log(`Open http://localhost:${PORT}/index.html to view the store`);
 });
