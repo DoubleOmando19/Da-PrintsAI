@@ -12,7 +12,7 @@ export function renderOrderSummary() {
     cartSummaryHTML = `
       <div style="text-align: center; padding: 40px 20px;">
         <p style="font-size: 18px; color: #666;">Your cart is empty.</p>
-        <a href="amazon.html" style="display: inline-block; margin-top: 15px; padding: 10px 25px; background: #f0c14b; color: #111; text-decoration: none; border-radius: 5px; font-weight: bold;">
+        <a href="index.html" style="display: inline-block; margin-top: 15px; padding: 10px 25px; background: #f0c14b; color: #111; text-decoration: none; border-radius: 5px; font-weight: bold;">
           Continue Shopping
         </a>
       </div>
