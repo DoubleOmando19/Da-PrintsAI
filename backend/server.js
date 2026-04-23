@@ -310,6 +310,89 @@ app.get('/api/session-status', async (req, res) => {
 
 
 
+
+// === Email Subscription Endpoint (saves to JSON database + sends welcome email) ===
+const SUBSCRIBERS_FILE = path.join(__dirname, '..', 'data', 'subscribers.json');
+
+function loadSubscribers() {
+  try {
+    const data = fs.readFileSync(SUBSCRIBERS_FILE, 'utf8');
+    return JSON.parse(data);
+  } catch (e) {
+    return [];
+  }
+}
+
+function saveSubscribers(list) {
+  fs.writeFileSync(SUBSCRIBERS_FILE, JSON.stringify(list, null, 2), 'utf8');
+}
+
+app.post('/api/subscribe', async (req, res) => {
+  try {
+    const { email, tag, gift } = req.body;
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      return res.status(400).json({ success: false, message: 'Valid email required.' });
+    }
+
+    // 1. Save to JSON database
+    const subscribers = loadSubscribers();
+    const exists = subscribers.find(s => s.email.toLowerCase() === email.toLowerCase());
+    if (!exists) {
+      subscribers.push({
+        email: email.toLowerCase(),
+        tag: tag || 'general',
+        gift: gift || '',
+        subscribedAt: new Date().toISOString(),
+        source: 'chatbot'
+      });
+      saveSubscribers(subscribers);
+      console.log('New subscriber saved:', email, 'tag:', tag);
+    } else {
+      if (tag && !exists.tag.includes(tag)) {
+        exists.tag = exists.tag + ',' + tag;
+        exists.updatedAt = new Date().toISOString();
+        saveSubscribers(subscribers);
+        console.log('Subscriber updated:', email, 'new tag:', tag);
+      }
+    }
+
+    // 2. Send welcome email via Brevo SMTP
+    let subject = 'Welcome to DA Prints AI!';
+    let body = '<h2>Welcome to DA Prints AI!</h2><p>Thank you for subscribing.</p>';
+
+    if (tag === 'free-wallpapers') {
+      subject = 'Your Free 4K Wallpapers from DA Prints AI!';
+      body = '<h2>Your Free Wallpapers Are Here!</h2><p>Thank you for joining! Here are your 3 exclusive 4K digital wallpapers.</p><p>Visit <a href="https://daprintsai.live">daprintsai.live</a> to browse our full collection.</p>';
+    } else if (tag === 'discount-15') {
+      subject = 'Your 15% Discount Code from DA Prints AI!';
+      body = '<h2>Your Exclusive Discount!</h2><p>Use code <strong>DAPRINTS15</strong> at checkout for 15% off your first order.</p><p>Shop now at <a href="https://daprintsai.live">daprintsai.live</a></p>';
+    } else if (tag === 'newsletter') {
+      subject = 'Welcome to the DA Prints AI Artist Tips Newsletter!';
+      body = '<h2>Welcome, Art Lover!</h2><p>You are now subscribed to our weekly artist tips newsletter.</p>';
+    } else if (tag === 'giveaway') {
+      subject = 'You are entered in the DA Prints AI Giveaway!';
+      body = '<h2>Giveaway Entry Confirmed!</h2><p>You are now entered to win exclusive digital artwork.</p>';
+    } else if (tag === 'community') {
+      subject = 'Welcome to the DA Prints AI Community!';
+      body = '<h2>Welcome to Our Community!</h2><p>Connect with fellow digital art enthusiasts.</p>';
+    }
+
+    body += '<br><hr><p style="font-size:12px;color:#888;">DA Prints AI | <a href="https://daprintsai.live">daprintsai.live</a></p>';
+
+    await transporter.sendMail({
+      from: process.env.EMAIL_FROM || 'DA Prints AI <noreply@daprintsai.live>',
+      to: email,
+      subject: subject,
+      html: body
+    });
+
+    return res.status(200).json({ success: true, message: 'Subscribed! Check your email.' });
+  } catch (err) {
+    console.error('Subscribe error:', err);
+    return res.status(500).json({ success: false, message: 'Failed to subscribe. Try again later.' });
+  }
+});
+
 // Health check endpoint
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'ok', timestamp: new Date().toISOString() });
