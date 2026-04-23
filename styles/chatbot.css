@@ -1,0 +1,86 @@
+/* DA Prints AI Chatbot - Email List Building Assistant */
+.dap-chat-toggle {
+  position: fixed; bottom: 20px; right: 20px;
+  width: 60px; height: 60px; border-radius: 50%;
+  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  border: none; cursor: pointer; z-index: 9999;
+  box-shadow: 0 4px 15px rgba(108,92,231,0.4);
+  display: flex; align-items: center; justify-content: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.dap-chat-toggle:hover { transform: scale(1.1); box-shadow: 0 6px 20px rgba(108,92,231,0.6); }
+.dap-chat-toggle svg { width: 28px; height: 28px; fill: white; }
+.dap-chat-window {
+  position: fixed; bottom: 90px; right: 20px;
+  width: 360px; max-height: 500px;
+  background: #1a1a2e; border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  z-index: 9998; display: none; flex-direction: column;
+  overflow: hidden; font-family: Roboto, sans-serif;
+  border: 1px solid rgba(108,92,231,0.3);
+}
+.dap-chat-window.open { display: flex; }
+.dap-chat-header {
+  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  padding: 14px 18px; display: flex;
+  align-items: center; justify-content: space-between;
+}
+.dap-chat-header-title { color: white; font-size: 15px; font-weight: 700; }
+.dap-chat-close {
+  background: none; border: none; color: white;
+  font-size: 20px; cursor: pointer; opacity: 0.8;
+}
+.dap-chat-close:hover { opacity: 1; }
+.dap-chat-messages {
+  flex: 1; overflow-y: auto; padding: 14px;
+  max-height: 320px; scroll-behavior: smooth;
+}
+.dap-chat-messages::-webkit-scrollbar { width: 6px; }
+.dap-chat-messages::-webkit-scrollbar-thumb { background: #6c5ce7; border-radius: 3px; }
+.dap-msg {
+  margin-bottom: 10px; max-width: 85%;
+  padding: 10px 14px; border-radius: 12px;
+  font-size: 13px; line-height: 1.5;
+  animation: dapFadeIn 0.3s ease;
+  white-space: pre-line;
+}
+@keyframes dapFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.dap-msg.bot {
+  background: #16213e; color: #e0e0e0;
+  border-bottom-left-radius: 4px;
+}
+.dap-msg.user {
+  background: #6c5ce7; color: white;
+  margin-left: auto; border-bottom-right-radius: 4px;
+  text-align: right;
+}
+.dap-quick-replies { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.dap-quick-btn {
+  background: rgba(108,92,231,0.15);
+  border: 1px solid rgba(108,92,231,0.4);
+  color: #a29bfe; padding: 6px 12px; border-radius: 20px;
+  font-size: 12px; cursor: pointer; transition: all 0.2s;
+  font-family: Roboto, sans-serif;
+}
+.dap-quick-btn:hover { background: #6c5ce7; color: white; border-color: #6c5ce7; }
+.dap-email-form { display: flex; gap: 6px; margin-top: 8px; }
+.dap-email-form input {
+  flex: 1; padding: 8px 12px; border-radius: 8px;
+  border: 1px solid rgba(108,92,231,0.4);
+  background: #0f1123; color: white; font-size: 12px;
+  font-family: Roboto, sans-serif; outline: none;
+}
+.dap-email-form input:focus { border-color: #6c5ce7; }
+.dap-email-form button {
+  background: #6c5ce7; color: white; border: none;
+  padding: 8px 14px; border-radius: 8px; font-size: 12px;
+  cursor: pointer; font-family: Roboto, sans-serif;
+}
+.dap-email-form button:hover { background: #5a4bd1; }
+@media (max-width: 480px) {
+  .dap-chat-window { width: calc(100vw - 24px); right: 12px; bottom: 80px; max-height: 70vh; }
+  .dap-chat-toggle { width: 52px; height: 52px; bottom: 16px; right: 16px; }
+}
