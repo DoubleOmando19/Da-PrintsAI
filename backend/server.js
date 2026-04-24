@@ -27,6 +27,7 @@ const cors = require('cors');
 const path = require('path');
 const fs = require('fs');
 const nodemailer = require('nodemailer');
+const subscribeHandler = require('../api/subscribe');
 
 const app = express();
 
@@ -41,6 +42,9 @@ app.use(cors({
   methods: ['GET', 'POST', 'OPTIONS'],
   credentials: true
 }));
+
+// Chatbot subscribe endpoint
+app.post("/api/subscribe", subscribeHandler);
 
 // Serve static files (the frontend)
 app.use(express.static(path.join(__dirname, '..')));

@@ -59,12 +59,12 @@
     animation: dapFadeIn 0.3s ease;
     white-space: pre-line;
 }
-.dap-msg.bot { background: rgba(0,0,0,0.04); color: #222; }
+.dap-msg.bot { background: rgba(108,92,231,0.15); color: #222; }
 .dap-msg.user { background: rgba(100,100,200,0.10); color: #222; margin-left: auto; }
 
-.dap-quick-replies { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 5px; }
+.dap-quick-replies { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 5px;  }
 .dap-quick-btn {
-    background: #6c5ce7; color: #fff;
+    background: rgba(108,92,231,0.55); color: #fff;
     border: none; border-radius: 12px;
     padding: 4px 8px; font-size: 11px; cursor: pointer;
     font-family: Roboto, sans-serif; transition: background 0.2s, color 0.2s;
