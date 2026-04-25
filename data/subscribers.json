@@ -1,0 +1,24 @@
+[
+  {
+    "email": "test@example.com",
+    "tag": "new-drops",
+    "gift": "",
+    "subscribedAt": "2026-04-24T18:22:40.065Z",
+    "source": "chatbot"
+  },
+  {
+    "email": "henry_alcaide@hotmail.com",
+    "tag": "new-drops,free-wallpapers",
+    "gift": "new artwork notifications",
+    "subscribedAt": "2026-04-24T20:31:23.858Z",
+    "source": "chatbot",
+    "updatedAt": "2026-04-25T03:33:14.954Z"
+  },
+  {
+    "email": "tests@example.com",
+    "tag": "giveaways",
+    "gift": "giveaway notifications",
+    "subscribedAt": "2026-04-24T21:48:53.878Z",
+    "source": "chatbot"
+  }
+]
