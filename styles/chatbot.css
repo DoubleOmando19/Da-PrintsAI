@@ -135,6 +135,9 @@
   gap: 4px;
   margin-top: 5px;
 }
+.dap-quick-btn:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+}
 .dap-quick-btn {
   background: #6c5ce7;
   color: #fff;

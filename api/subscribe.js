@@ -54,6 +54,8 @@ module.exports = async (req, res) => {
         exists.updatedAt = new Date().toISOString();
         saveSubscribers(subscribers);
       }
+      console.log('Duplicate subscriber skipped email:', email, 'tag:', tag);
+      return res.status(200).json({ success: true, message: 'You are already subscribed!' });
     }
 
     // 2. Send welcome email via Brevo SMTP

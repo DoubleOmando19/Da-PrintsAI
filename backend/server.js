@@ -357,6 +357,8 @@ app.post('/api/subscribe', async (req, res) => {
         exists.updatedAt = new Date().toISOString();
         saveSubscribers(subscribers);
         console.log('Subscriber updated:', email, 'new tag:', tag);
+      console.log('Duplicate subscriber skipped email:', email, 'tag:', tag);
+      return res.status(200).json({ success: true, message: 'You are already subscribed!' });
       }
     }
 
