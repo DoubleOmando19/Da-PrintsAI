@@ -642,7 +642,7 @@ export const products = [
     priceCents: 199
   },
   {
-    id: "bc2847e9-5323-403f-b7cf-57fde044a962",
+    id: "bc2847e9-5323-403f-b7cf-57fde044a966",
     image: "images/products/Waterfall.png",
     image1: "/images/New Project picz PDF/Waterfall.pdf",
     name: "AI Artwork - Waterfall",
@@ -653,7 +653,7 @@ export const products = [
     priceCents: 199
   },
   {
-    id: "bc2847e9-5323-403f-b7cf-57fde044a963",
+    id: "bc2847e9-5323-403f-b7cf-57fde044a967",
     image: "images/products/xmastree.jpg",
     image1: "/images/New Project picz PDF/xmastree.pdf",
     name: "R1 AI Artwork - XMas Tree",
@@ -664,7 +664,7 @@ export const products = [
     priceCents: 199
   },
   {
-    id: "bc2847e9-5323-403f-b7cf-57fde044a964",
+    id: "bc2847e9-5323-403f-b7cf-57fde044a968",
     image: "images/products/babysanta.jpg",
     image1: "/images/New Project picz PDF/babysanta.pdf",
     name: "R1 AI Artwork - BabySanta",
@@ -675,7 +675,7 @@ export const products = [
     priceCents: 199
   },
   {
-    id: "bc2847e9-5323-403f-b7cf-57fde044a965",
+    id: "bc2847e9-5323-403f-b7cf-57fde044a969",
     image: "images/products/Alpaca.jpg",
     image1: "/images/New Project picz PDF/Alpaca.pdf",
     name: "R1 AI Artwork - El Alpaca",
@@ -686,7 +686,7 @@ export const products = [
     priceCents: 199
   },
   {
-    id: "bc2847e9-5323-403f-b7cf-57fde044a966",
+    id: "bc2847e9-5323-403f-b7cf-57fde044a970",
     image: "images/products/Eagle.png",
     image1: "/images/New Project picz PDF/Eagle.pdf",
     name: "R1 AI Artwork - The Eagle",
@@ -697,7 +697,7 @@ export const products = [
     priceCents: 199
   },
   {
-    id: "bc2847e9-5323-403f-b7cf-57fde044a967",
+    id: "bc2847e9-5323-403f-b7cf-57fde044a971",
     image: "images/products/crystalcat.jpg",
     image1: "/images/New Project picz PDF/crystalcat.pdf",
     name: "R1 AI Artwork - Crystal Cat",
@@ -708,7 +708,7 @@ export const products = [
     priceCents: 199
   },
   {
-    id: "bc2847e9-5323-403f-b7cf-57fde044a968",
+    id: "bc2847e9-5323-403f-b7cf-57fde044a972",
     image: "images/products/blueangel.jpg",
     image1: "/images/New Project picz PDF/blueangel.pdf",
     name: "R1 AI Artwork - Blue angel",
@@ -719,7 +719,7 @@ export const products = [
     priceCents: 199
   },
   {
-    id: "bc2847e9-5323-403f-b7cf-57fde044a9669",
+    id: "bc2847e9-5323-403f-b7cf-57fde044a9673",
     image: "images/products/2Birds.jpg",
     image1: "/images/New Project picz PDF/2Birds.pdf",
     name: "R1 AI Artwork - El Toucan",
@@ -730,7 +730,7 @@ export const products = [
     priceCents: 199
   },
   {
-    id: "bc2847e9-5323-403f-b7cf-57fde044a970",
+    id: "bc2847e9-5323-403f-b7cf-57fde044a974",
     image: "images/products/Minimouse.jpg",
     image1: "/images/New Project picz PDF/MINIBEAR.pdf",
     name: "R1 AI Artwork - Mini mouse",
@@ -741,7 +741,7 @@ export const products = [
     priceCents: 199
   },
   {
-    id: "bc2847e9-5323-403f-b7cf-57fde044a971",
+    id: "bc2847e9-5323-403f-b7cf-57fde044a975",
     image: "images/products/Nemo.jpg",
     image1: "/images/New Project picz PDF/nemo.pdf",
     name: "R1 AI Artwork - El Nemo",
@@ -752,7 +752,7 @@ export const products = [
     priceCents: 199
   },
   {
-    id: "bc2847e9-5323-403f-b7cf-57fde044a972",
+    id: "bc2847e9-5323-403f-b7cf-57fde044a976",
     image: "images/products/soccerball.jpg",
     image1: "/images/New Project picz PDF/soccerball.pdf",
     name: "R1 AI Artwork - Futbol",
@@ -763,7 +763,7 @@ export const products = [
     priceCents: 199
   },
   {
-    id: "bc2847e9-5323-403f-b7cf-57fde044a973",
+    id: "bc2847e9-5323-403f-b7cf-57fde044a977",
     image: "images/products/Bball.jpg",
     image1: "/images/New Project picz PDF/Bball.pdf",
     name: "R1 AI Artwork - Basketball",
@@ -774,7 +774,7 @@ export const products = [
     priceCents: 199
   },
   {
-    id: "bc2847e9-5323-403f-b7cf-57fde044a974",
+    id: "bc2847e9-5323-403f-b7cf-57fde044a978",
     image: "images/products/multicolorbear.jpg",
     image1: "/images/New Project picz PDF/multicolorbear.pdf",
     name: "R1 AI Artwork - The Bear",
@@ -785,7 +785,7 @@ export const products = [
     priceCents: 199
   },
   {
-    id: "bc2847e9-5323-403f-b7cf-57fde044a975",
+    id: "bc2847e9-5323-403f-b7cf-57fde044a979",
     image: "images/products/Jack2.jpg",
     image1: "/images/New Project picz PDF/Jack2.pdf",
     name: "R1 AI Artwork - Jack",
@@ -796,7 +796,7 @@ export const products = [
     priceCents: 199
   },
   {
-    id: "bc2847e9-5323-403f-b7cf-57fde044a976",
+    id: "bc2847e9-5323-403f-b7cf-57fde044a980",
     image: "images/products/MickieD.jpg",
     image1: "/images/New Project picz PDF/mcd1.pdf",
     name: "R1 AI Artwork - MickieDee",
@@ -807,7 +807,7 @@ export const products = [
     priceCents: 199
   },
   {
-    id: "bc2847e9-5323-403f-b7cf-57fde044a977",
+    id: "bc2847e9-5323-403f-b7cf-57fde044a981",
     image: "images/products/angel.jpg",
     image1: "/images/New Project picz PDF/angel.pdf",
     name: "R1 AI Artwork - Angel",
@@ -818,7 +818,7 @@ export const products = [
     priceCents: 199
   },
   {
-    id: "bc2847e9-5323-403f-b7cf-57fde044a978",
+    id: "bc2847e9-5323-403f-b7cf-57fde044a982",
     image: "images/products/Supermario.jpg",
     image1: "/images/New Project picz PDF/Supermario.pdf",
     name: "R1 AI Artwork - Supermario",
@@ -829,7 +829,7 @@ export const products = [
     priceCents: 199
   },
   {
-    id: "bc2847e9-5323-403f-b7cf-57fde044a979",
+    id: "bc2847e9-5323-403f-b7cf-57fde044a983",
     image: "images/products/Theride.jpg",
     image1: "/images/New Project picz PDF/Theride.pdf",
     name: "AI Artwork - El Rodeo",
@@ -840,7 +840,7 @@ export const products = [
     priceCents: 199
   },
   {
-    id: "bc2847e9-5323-403f-b7cf-57fde044a980",
+    id: "bc2847e9-5323-403f-b7cf-57fde044a984",
     image: "images/products/Monchichi.jpg",
     image1: "/images/New Project picz PDF/Monchichi.pdf",
     name: "R1 AI Artwork - Mon chi-chi",
@@ -851,7 +851,7 @@ export const products = [
     priceCents: 199
   },
   {
-    id: "bc2847e9-5323-403f-b7cf-57fde044a981",
+    id: "bc2847e9-5323-403f-b7cf-57fde044a985",
     image: "images/products/Nemo1.jpg",
     image1: "/images/New Project picz PDF/Nemo1.pdf",
     name: "AI Artwork - Aquarium",
@@ -862,7 +862,7 @@ export const products = [
     priceCents: 199
   },
   {
-    id: "bc2847e9-5323-403f-b7cf-57fde044a982",
+    id: "bc2847e9-5323-403f-b7cf-57fde044a986",
     image: "images/products/Roboto1.jpg",
     image1: "/images/New Project picz PDF/Roboto1.pdf",
     name: "R1 AI Artwork - Roboto7",
@@ -873,7 +873,7 @@ export const products = [
     priceCents: 199
   },
   {
-    id: "bc2847e9-5323-403f-b7cf-57fde044a983",
+    id: "bc2847e9-5323-403f-b7cf-57fde044a987",
     image: "images/products/rabbit.jpg",
     image1: "/images/New Project picz PDF/rabbit.pdf",
     name: "R1 AI Artwork - El Rabbit",
@@ -884,7 +884,7 @@ export const products = [
     priceCents: 199
   },
   {
-    id: "bc2847e9-5323-403f-b7cf-57fde044a984",
+    id: "bc2847e9-5323-403f-b7cf-57fde044a988",
     image: "images/products/silverelephant.jpg",
     image1: "/images/New Project picz PDF/silverelephant.pdf",
     name: "R1 AI Artwork - Silver Elephant",
@@ -895,7 +895,7 @@ export const products = [
     priceCents: 199
   },
   {
-    id: "bc2847e9-5323-403f-b7cf-57fde044a985",
+    id: "bc2847e9-5323-403f-b7cf-57fde044a989",
     image: "images/products/swan.jpg",
     image1: "/images/New Project picz PDF/swan.pdf",
     name: "R1 AI Artwork - Swan",
@@ -906,7 +906,7 @@ export const products = [
     priceCents: 199
   },
   {
-    id: "bc2847e9-5323-403f-b7cf-57fde044a987",
+    id: "bc2847e9-5323-403f-b7cf-57fde044a990",
     image: "images/products/Russa.jpg",
     image1: "/images/New Project picz PDF/Russa.pdf",
     name: "R1 AI Artwork - La Russa",
@@ -917,7 +917,7 @@ export const products = [
     priceCents: 199
   },
   {
-    id: "bc2847e9-5323-403f-b7cf-57fde044a988",
+    id: "bc2847e9-5323-403f-b7cf-57fde044a991",
     image: "images/products/Mario.jpg",
     image1: "/images/New Project picz PDF/supermario4.pdf",
     name: "AI Artwork - MarioWorld",
@@ -928,7 +928,7 @@ export const products = [
     priceCents: 199
   },
   {
-    id: "bc2847e9-5323-403f-b7cf-57fde044a989",
+    id: "bc2847e9-5323-403f-b7cf-57fde044a992",
     image: "images/products/2angels.jpg",
     image1: "/images/New Project picz PDF/2angels.pdf",
     name: "AI Artwork - Angels",
