@@ -29,7 +29,7 @@
   width: 55px;
   height: 55px;
   object-fit: cover;
-  border: rbg(149,250,246);
+  border-color: rbg(149,250,246);
   border-radius: 50%;
 }
 
