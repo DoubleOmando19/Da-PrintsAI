@@ -64,10 +64,10 @@
   border-bottom: 1px solid rgba(180, 180, 180, 0.15);
 }
 .dap-chat-header-title {
-  color: #222;
+  color: #6c5ce7;
   font-size: 17px;
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-weight: 600;
+  font-weight: bold;
 }
 .dap-chat-close {
   background: none;
@@ -119,7 +119,7 @@
 }
 .dap-msg.bot {
   background: rgba(0, 0, 0, 0.04);
-  color: #222;
+  color: #6c5ce7;
   font-size: 14px;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
@@ -196,8 +196,7 @@
   .dap-chat-window {
     width: calc(60vw - 14px);
     right: 12px;
-    bottom: 150px;
-  
+    bottom: 100px;
     max-height: 64vh;
   }
   .dap-chat-toggle {
