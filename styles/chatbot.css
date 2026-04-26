@@ -208,5 +208,7 @@
   .dap-chat-toggle img {
     width: 55px;
     height: 55px;
+    border: 1px solid rbg(149,250,246);
+    border-radius: 50%;
   }
 }
