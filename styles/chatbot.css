@@ -19,8 +19,7 @@
     transform 0.3s,
     opacity 0.3s;
   padding: 0;
-  border: 1px solid rbg(149,250,246);
-  border-radius: 50%;
+  
 }
 .dap-chat-toggle:hover {
   transform: scale(1.12);
@@ -29,8 +28,9 @@
 .dap-chat-toggle img {
   width: 55px;
   height: 55px;
-  border-radius: 50%;
   object-fit: cover;
+  border: 1px solid rbg(149,250,246);
+  border-radius: 50%;
 }
 
 .dap-chat-window {
