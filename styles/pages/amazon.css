@@ -3,7 +3,7 @@
 }
 
 .js-products-grid {
-  margin-left: 0px;
+  margin-left: 10px;
   display: grid;
 
   /* - In CSS Grid, 1fr means a column will take up the
