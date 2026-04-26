@@ -214,6 +214,6 @@
     max-height: 300px;
   }
   .dap-msg-bot {
-    font-family: bold;
+    font-weight: bold;
   }
 }
