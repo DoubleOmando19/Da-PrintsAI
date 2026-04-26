@@ -36,21 +36,25 @@
 .amazon-logo {
   width: 90px;
   margin-top: 5px;
+  border: none;
 }
 
 .amazon-mobile-logo {
   display: none;
+  border: none;
 }
 
 @media (max-width: 575px) {
   .amazon-logo {
     display: none;
+    border: none;
   }
 
   .amazon-mobile-logo {
     display: block;
     height: 30px;
     margin-top: 5px;
+    border: none;
   }
 }
 
