@@ -165,67 +165,121 @@
     }
 
     function openResultsPage(results, query) {
-        // Build results HTML for overlay
-        var resultsHtml = "";
-        for (var i = 0; i < results.length; i++) {
-            var p = results[i];
-            resultsHtml += "<div style='border:1px solid #ddd;border-radius:10px;padding:12px;margin-bottom:12px;background:#fff;'>";
-            if (p.image) {
-                resultsHtml += "<img src='" + p.image + "' alt='" + (p.name||"") + "' style='width:100%;max-width:250px;border-radius:8px;display:block;margin:0 auto 10px;'>";
-            }
-            resultsHtml += "<div style='font-weight:bold;font-size:15px;color:#232f3e;margin-bottom:4px;text-align:center;'>" + (p.name||"Unknown") + "</div>";
-            if (p.price) {
-                resultsHtml += "<div style='color:#b12704;font-size:14px;text-align:center;margin-bottom:6px;'>$" + p.price + "</div>";
-            }
-            if (p.amazonLink) {
-                resultsHtml += "<a href='" + p.amazonLink + "' target='_blank' rel='noopener' style='display:block;text-align:center;background:#febd69;color:#232f3e;padding:8px 16px;border-radius:6px;text-decoration:none;font-weight:bold;margin-top:6px;'>View on Amazon</a>";
-            }
-            resultsHtml += "</div>";
-        }
-        
+        // Remove any existing overlay first
+        var ex = document.getElementById("dapSearchOverlay");
+        if (ex) ex.parentNode.removeChild(ex);
+
         // Create overlay container
-        var overlay = document.createElement("div");
-        overlay.id = "dapSearchOverlay";
-        overlay.style.cssText = "position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);z-index:100000;display:flex;align-items:center;justify-content:center;";
-        
+        var ov = document.createElement("div");
+        ov.id = "dapSearchOverlay";
+        ov.style.cssText = "position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);z-index:100000;display:flex;align-items:center;justify-content:center;padding:10px;box-sizing:border-box;";
+
         // Create results container
-        var container = document.createElement("div");
-        container.style.cssText = "background:#f5f5f5;width:92%;max-width:500px;max-height:85vh;border-radius:12px;overflow-y:auto;padding:16px;position:relative;-webkit-overflow-scrolling:touch;";
-        
+        var ct = document.createElement("div");
+        ct.style.cssText = "background:#f5f5f5;width:100%;max-width:500px;max-height:90vh;border-radius:12px;overflow-y:auto;padding:16px;position:relative;-webkit-overflow-scrolling:touch;";
+
         // Header with close button
-        var header = document.createElement("div");
-        header.style.cssText = "display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid #febd69;";
-        header.innerHTML = "<div style='font-size:18px;font-weight:bold;color:#232f3e;'>\ud83d\udd0d Results for \"" + query + "\"</div>";
-        
-        var closeBtn = document.createElement("button");
-        closeBtn.textContent = "\u2715";
-        closeBtn.style.cssText = "background:#232f3e;color:white;border:none;border-radius:50%;width:32px;height:32px;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;";
-        closeBtn.onclick = function() { document.body.removeChild(overlay); };
-        header.appendChild(closeBtn);
-        
-        container.appendChild(header);
-        
-        // Results content
-        var resultsDiv = document.createElement("div");
-        resultsDiv.innerHTML = resultsHtml;
-        container.appendChild(resultsDiv);
-        
-        // Footer with navigation
-        var footer = document.createElement("div");
-        footer.style.cssText = "margin-top:12px;padding-top:8px;border-top:1px solid #ddd;text-align:center;";
-        footer.innerHTML = "<a href='amazon.html' style='color:#232f3e;text-decoration:none;font-weight:bold;margin:0 10px;'>Back to Store</a> | <a href='checkout.html' style='color:#232f3e;text-decoration:none;font-weight:bold;margin:0 10px;'>Checkout</a>";
-        container.appendChild(footer);
-        
-        overlay.appendChild(container);
-        
+        var hd = document.createElement("div");
+        hd.style.cssText = "display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid #febd69;position:sticky;top:0;background:#f5f5f5;z-index:1;";
+
+        var title = document.createElement("div");
+        title.style.cssText = "font-size:17px;font-weight:bold;color:#232f3e;";
+        title.textContent = "Results for \\"" + query + "\\"";
+        hd.appendChild(title);
+
+        var cb = document.createElement("button");
+        cb.textContent = "\\u2715";
+        cb.style.cssText = "background:#232f3e;color:white;border:none;border-radius:50%;width:32px;height:32px;font-size:18px;cursor:pointer;flex-shrink:0;";
+        cb.addEventListener("click", function() {
+            if (ov.parentNode) ov.parentNode.removeChild(ov);
+        });
+        hd.appendChild(cb);
+        ct.appendChild(hd);
+
+        // Build result cards
+        for (var i = 0; i < results.length; i++) {
+            (function(p) {
+                var card = document.createElement("div");
+                card.style.cssText = "border:1px solid #ddd;border-radius:10px;padding:12px;margin-bottom:12px;background:#fff;text-align:center;";
+
+                if (p.image) {
+                    var img = document.createElement("img");
+                    img.src = p.image;
+                    img.alt = p.name || "";
+                    img.style.cssText = "width:100%;max-width:250px;border-radius:8px;display:block;margin:0 auto 10px;";
+                    card.appendChild(img);
+                }
+
+                var nameDiv = document.createElement("div");
+                nameDiv.style.cssText = "font-weight:bold;font-size:15px;color:#232f3e;margin-bottom:8px;";
+                nameDiv.textContent = p.name || "Unknown";
+                card.appendChild(nameDiv);
+
+                // Add to Cart button
+                var cartBtn = document.createElement("button");
+                cartBtn.textContent = "Add to Cart";
+                cartBtn.style.cssText = "background:#febd69;color:#232f3e;border:none;padding:10px 20px;border-radius:6px;font-weight:bold;font-size:14px;cursor:pointer;margin:4px;";
+                cartBtn.addEventListener("click", function() {
+                    try {
+                        var cart = JSON.parse(localStorage.getItem("cart")) || [];
+                        var found = false;
+                        for (var j = 0; j < cart.length; j++) {
+                            if (cart[j].productId === p.id) {
+                                cart[j].quantity += 1;
+                                found = true;
+                                break;
+                            }
+                        }
+                        if (!found) {
+                            cart.push({productId: p.id, quantity: 1, deliveryOptionId: "1"});
+                        }
+                        localStorage.setItem("cart", JSON.stringify(cart));
+                        cartBtn.textContent = "Added \\u2713";
+                        cartBtn.style.background = "#4CAF50";
+                        cartBtn.style.color = "white";
+                        setTimeout(function() {
+                            cartBtn.textContent = "Add to Cart";
+                            cartBtn.style.background = "#febd69";
+                            cartBtn.style.color = "#232f3e";
+                        }, 1500);
+                    } catch(e) {
+                        console.error("Add to cart error:", e);
+                    }
+                });
+                card.appendChild(cartBtn);
+
+                ct.appendChild(card);
+            })(results[i]);
+        }
+
+        // Footer with navigation links
+        var ft = document.createElement("div");
+        ft.style.cssText = "margin-top:12px;padding-top:8px;border-top:1px solid #ddd;text-align:center;";
+
+        var backLink = document.createElement("a");
+        backLink.href = "amazon.html";
+        backLink.textContent = "Back to Store";
+        backLink.style.cssText = "color:#232f3e;text-decoration:none;font-weight:bold;margin:0 10px;";
+        ft.appendChild(backLink);
+
+        var sep = document.createTextNode(" | ");
+        ft.appendChild(sep);
+
+        var checkLink = document.createElement("a");
+        checkLink.href = "checkout.html";
+        checkLink.textContent = "Checkout";
+        checkLink.style.cssText = "color:#232f3e;text-decoration:none;font-weight:bold;margin:0 10px;";
+        ft.appendChild(checkLink);
+
+        ct.appendChild(ft);
+        ov.appendChild(ct);
+
         // Close on overlay background click
-        overlay.onclick = function(e) { if (e.target === overlay) document.body.removeChild(overlay); };
-        
-        // Remove any existing overlay
-        var existing = document.getElementById("dapSearchOverlay");
-        if (existing) existing.parentNode.removeChild(existing);
-        
-        document.body.appendChild(overlay);
+        ov.addEventListener("click", function(e) {
+            if (e.target === ov && ov.parentNode) ov.parentNode.removeChild(ov);
+        });
+
+        document.body.appendChild(ov);
     }
 
   function toggleChat() {
