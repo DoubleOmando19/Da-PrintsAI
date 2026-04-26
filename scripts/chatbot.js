@@ -150,9 +150,9 @@
     }
 
     function searchByKeyword(query) {
-        if (typeof productKeywords === "undefined") return [];
+        var kw = (typeof productKeywords !== "undefined") ? productKeywords : (typeof window.productKeywords !== "undefined") ? window.productKeywords : null; if (!kw) { console.error("productKeywords not loaded"); return []; }
         var q = query.toLowerCase();
-        return productKeywords.filter(function (p) {
+        return kw.filter(function (p) {
             if (p.name && p.name.toLowerCase().indexOf(q) >= 0) return true;
             if (p.productClass && p.productClass.toLowerCase().indexOf(q) >= 0) return true;
             if (p.keywords) {
@@ -165,46 +165,67 @@
     }
 
     function openResultsPage(results, query) {
-        var html = "<!DOCTYPE html><html><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0\">";
-        html += "<title>Search Results - " + query + " | DA Prints AI</title>";
-        html += "<style>";
-        html += "body{font-family:Roboto,Arial,sans-serif;background:#232f3e;color:#fff;margin:0;padding:20px}";
-        html += "h1{text-align:center;color:#febd69;margin-bottom:5px}";
-        html += "p.subtitle{text-align:center;color:#ccc;margin-bottom:30px}";
-        html += ".results-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px;max-width:1200px;margin:0 auto;padding:0 20px}";
-        html += ".result-card{background:#37475a;border-radius:12px;overflow:hidden;transition:transform .2s;cursor:pointer}";
-        html += ".result-card:hover{transform:translateY(-4px);box-shadow:0 8px 25px rgba(0,0,0,.4)}";
-        html += ".result-card img{width:100%;height:220px;object-fit:cover}";
-        html += ".result-card .info{padding:12px 15px}";
-        html += ".result-card .info h3{margin:0 0 6px;font-size:15px;color:#febd69}";
-        html += ".result-card .info .tags{font-size:12px;color:#aaa}";
-        html += ".result-card .info .add-to-cart-btn{display:inline-block;margin-top:8px;padding:6px 14px;background:#febd69;color:#232f3e;border-radius:6px;text-decoration:none;font-size:13px;font-weight:bold}";
-        html += ".result-card .info .add-to-cart-btn:hover{background:#f3a847}";
-        html += ".bottom-buttons{display:flex;justify-content:center;gap:20px;margin:30px auto} .back-btn{display:block;text-align:center;padding:12px 30px;background:#febd69;color:#232f3e;border:none;border-radius:8px;font-size:16px;font-weight:bold;cursor:pointer;text-decoration:none;width:fit-content}";
-        html += ".back-btn:hover{background:#f3a847} .checkout-btn{background:#febd69;color:#232f3e} .checkout-btn:hover{background:#f3a847}";
-        html += "</style></head><body>";
-        html += "<h1>Search Results</h1>";
-        html += "<p class=\"subtitle\">Found " + results.length + " artwork(s) for \"" + query + "\"</p>";
-        html += "<div class=\"results-grid\">";
+        // Build results HTML for overlay
+        var resultsHtml = "";
         for (var i = 0; i < results.length; i++) {
             var p = results[i];
-            html += "<div class=\"result-card\">";
-            html += "<img src=\"" + p.image + "\" alt=\"" + p.name + "\">";
-            html += "<div class=\"info\">";
-            html += "<h3>" + p.name + "</h3>";
-            html += "<div class=\"tags\">" + (p.keywords ? p.keywords.join(", ") : "") + "</div>";
-            html += "<button class=\"add-to-cart-btn\" data-product-id=\"" + p.id + "\" onclick=\"addToCart(this)\">Add to Cart</button>";
-            html += "</div></div>";
+            resultsHtml += "<div style='border:1px solid #ddd;border-radius:10px;padding:12px;margin-bottom:12px;background:#fff;'>";
+            if (p.image) {
+                resultsHtml += "<img src='" + p.image + "' alt='" + (p.name||"") + "' style='width:100%;max-width:250px;border-radius:8px;display:block;margin:0 auto 10px;'>";
+            }
+            resultsHtml += "<div style='font-weight:bold;font-size:15px;color:#232f3e;margin-bottom:4px;text-align:center;'>" + (p.name||"Unknown") + "</div>";
+            if (p.price) {
+                resultsHtml += "<div style='color:#b12704;font-size:14px;text-align:center;margin-bottom:6px;'>$" + p.price + "</div>";
+            }
+            if (p.amazonLink) {
+                resultsHtml += "<a href='" + p.amazonLink + "' target='_blank' rel='noopener' style='display:block;text-align:center;background:#febd69;color:#232f3e;padding:8px 16px;border-radius:6px;text-decoration:none;font-weight:bold;margin-top:6px;'>View on Amazon</a>";
+            }
+            resultsHtml += "</div>";
         }
-        html += "</div>";
-        html += "<div class=\"bottom-buttons\"><a class=\"back-btn\" href=\"amazon.html\">Back to Store</a><a class=\"back-btn checkout-btn\" href=\"checkout.html\">Checkout</a></div>";
-        html += "<script>function addToCart(btn){var id=btn.getAttribute('data-product-id');var cart=JSON.parse(localStorage.getItem('cart'))||[];var found=false;for(var i=0;i<cart.length;i++){if(cart[i].productId===id){cart[i].quantity+=1;found=true;break;}}if(!found){cart.push({productId:id,quantity:1,deliveryOptionId:'1'});}localStorage.setItem('cart',JSON.stringify(cart));btn.textContent='Added \\u2713';btn.style.background='#4CAF50';btn.style.color='white';setTimeout(function(){btn.textContent='Add to Cart';btn.style.background='#febd69';btn.style.color='#232f3e';},1500);}<\/script>";
-            html += "</body></html>";
-        var blob = new Blob([html], {type: "text/html"});
-        var url = URL.createObjectURL(blob);
-        var a = document.createElement("a"); a.href = url; a.target = "_blank"; a.rel = "noopener";
-        document.body.appendChild(a); a.click(); document.body.removeChild(a);
-        setTimeout(function() { URL.revokeObjectURL(url); }, 1000);
+        
+        // Create overlay container
+        var overlay = document.createElement("div");
+        overlay.id = "dapSearchOverlay";
+        overlay.style.cssText = "position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);z-index:100000;display:flex;align-items:center;justify-content:center;";
+        
+        // Create results container
+        var container = document.createElement("div");
+        container.style.cssText = "background:#f5f5f5;width:92%;max-width:500px;max-height:85vh;border-radius:12px;overflow-y:auto;padding:16px;position:relative;-webkit-overflow-scrolling:touch;";
+        
+        // Header with close button
+        var header = document.createElement("div");
+        header.style.cssText = "display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid #febd69;";
+        header.innerHTML = "<div style='font-size:18px;font-weight:bold;color:#232f3e;'>\ud83d\udd0d Results for \"" + query + "\"</div>";
+        
+        var closeBtn = document.createElement("button");
+        closeBtn.textContent = "\u2715";
+        closeBtn.style.cssText = "background:#232f3e;color:white;border:none;border-radius:50%;width:32px;height:32px;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;";
+        closeBtn.onclick = function() { document.body.removeChild(overlay); };
+        header.appendChild(closeBtn);
+        
+        container.appendChild(header);
+        
+        // Results content
+        var resultsDiv = document.createElement("div");
+        resultsDiv.innerHTML = resultsHtml;
+        container.appendChild(resultsDiv);
+        
+        // Footer with navigation
+        var footer = document.createElement("div");
+        footer.style.cssText = "margin-top:12px;padding-top:8px;border-top:1px solid #ddd;text-align:center;";
+        footer.innerHTML = "<a href='amazon.html' style='color:#232f3e;text-decoration:none;font-weight:bold;margin:0 10px;'>Back to Store</a> | <a href='checkout.html' style='color:#232f3e;text-decoration:none;font-weight:bold;margin:0 10px;'>Checkout</a>";
+        container.appendChild(footer);
+        
+        overlay.appendChild(container);
+        
+        // Close on overlay background click
+        overlay.onclick = function(e) { if (e.target === overlay) document.body.removeChild(overlay); };
+        
+        // Remove any existing overlay
+        var existing = document.getElementById("dapSearchOverlay");
+        if (existing) existing.parentNode.removeChild(existing);
+        
+        document.body.appendChild(overlay);
     }
 
   function toggleChat() {

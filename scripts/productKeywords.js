@@ -1,7 +1,7 @@
 // Product Keywords Data - Maps each product to keywords/tags and product classes
 // Auto-generated product keyword mappings for all 81 products
 
-const productKeywords = [
+var productKeywords = [
   {
     id: "54e0eccd-8f36-462b-b68a-8182611d9add",
     name: "AI Artwork - Toucans",
