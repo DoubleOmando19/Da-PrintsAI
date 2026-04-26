@@ -3,7 +3,7 @@
 
 .dap-chat-toggle {
   position: fixed;
-  padding-top: 10px;
+  padding-top: 20px;
   bottom: 22px;
   right: 22px;
   width: 50px;
@@ -33,7 +33,7 @@
 
 .dap-chat-window {
   position: fixed;
-  bottom: 75px;
+  bottom: 65px;
   right: 19px;
   width: 240px;
   max-height: 312px;
