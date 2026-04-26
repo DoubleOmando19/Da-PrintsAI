@@ -9,7 +9,7 @@
   height: 50px;
   border-radius: 50%;
   background: transparent;
-  border: rbg(149,250,246);
+  border-color: rbg(149,250,246);
   cursor: pointer;
   z-index: 9999;
   display: flex;
