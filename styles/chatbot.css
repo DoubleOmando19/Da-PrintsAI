@@ -85,7 +85,7 @@
   flex: 1;
   overflow-y: auto;
   padding: 10px;
-  max-height: 200px;
+  max-height: 300px;
   scroll-behavior: smooth;
 }
 .dap-chat-messages::-webkit-scrollbar {
