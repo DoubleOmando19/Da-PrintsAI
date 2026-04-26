@@ -64,7 +64,7 @@
   border-bottom: 1px solid rgba(180, 180, 180, 0.15);
 }
 .dap-chat-header-title {
-  color: #222;
+  color: #6c5ce7;
   font-size: 17px;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 600;
@@ -85,7 +85,7 @@
   flex: 1;
   overflow-y: auto;
   padding: 10px;
-  max-height: 180px;
+  max-height: 200px;
   scroll-behavior: smooth;
 }
 .dap-chat-messages::-webkit-scrollbar {
