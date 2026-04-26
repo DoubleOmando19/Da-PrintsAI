@@ -196,7 +196,7 @@
   .dap-chat-window {
     width: calc(60vw - 14px);
     right: 12px;
-    bottom: 70px;
+    bottom: 62px;
     max-height: 54vh;
   }
   .dap-chat-toggle {
@@ -206,9 +206,9 @@
     right: 29px;
   }
   .dap-chat-toggle img {
-    margin-top: 25px;
-    width: 62px;
-    height: 62px;
+    margin-top: 30px;
+    width: 60px;
+    height: 60px;
   }
   .dap-msg-bot {
     margin-top: 20px;
