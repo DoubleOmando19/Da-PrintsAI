@@ -197,7 +197,7 @@
     width: calc(60vw - 14px);
     right: 12px;
     bottom: 150px;
-    height: 400px;
+  
     max-height: 64vh;
   }
   .dap-chat-toggle {
