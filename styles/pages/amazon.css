@@ -63,6 +63,7 @@
 @media (max-width: 450px) {
   .products-grid {
     grid-template-columns: 1fr;
+    margin-right: 10px;
   }
 }
 
