@@ -62,7 +62,7 @@
   flex: 1;
   max-width: 850px;
   margin-left: 10px;
-  margin-right: 150px;
+  margin-right: 180px;
   display: flex;
 }
 
@@ -162,7 +162,7 @@
     font-size: 28px !important;
     font-weight: bold !important;
     white-space: nowrap !important;
-    margin-left: 40px;
+    margin-left: 0px;
   }
 
   /* Fix 3: Shift cart/info button left so all text is fully visible */
