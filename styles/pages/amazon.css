@@ -3,7 +3,7 @@
 }
 
 .js-products-grid {
-  margin-left: 10px;
+  margin-right: 10px;
   display: grid;
 
   /* - In CSS Grid, 1fr means a column will take up the
@@ -102,6 +102,7 @@
 }
 
 .product-name {
+  margin-top: -10px;
   height: 35px;
   margin-bottom: 5px;
   font-size: 20px;
