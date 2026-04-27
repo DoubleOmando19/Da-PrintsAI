@@ -162,7 +162,7 @@
     font-size: 28px !important;
     font-weight: bold !important;
     white-space: nowrap !important;
-    margin-right: 30px;
+    margin-left: -30px;
   }
 
   /* Fix 3: Shift cart/info button left so all text is fully visible */
